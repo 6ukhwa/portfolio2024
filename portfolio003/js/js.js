@@ -19,7 +19,7 @@ let winht = $(window).height()
 // 화면이 리사이징 될때마다 브라우저 화면높이를 찾아라
 $(window).resize(function(){
 
-    let winth2 = $(window).height()
+    let winht2 = $(window).height()
 })
 
 
@@ -27,7 +27,7 @@ $('article').height(winht)
 console.log(winht)
 
 
-$('.in_img p').click(function(){
+$('.st_box').click(function(){
 
     $('nav, .main').fadeIn()
     $('.intro').fadeOut()
@@ -52,15 +52,40 @@ $(window).scroll(function(){
         }
     }
 
-
-    if (sc>= 2800) {
-        
-        $('.sign').addClass('on')
-    }else {
-    $('.sign').removeClass('on')
-          }
+    $(window).on("scroll", function() {
+        var sc = $(this).scrollTop();
     
-})
+        
+
+
+        if (sc >= 500 && sc<1600) {
+            $(".turn").each(function(index) {
+                // 각 figure에 대응하는 rotateY 각도 설정
+                var rotateY = 45 * index;
+                $(this).css('transform', `rotateY(${rotateY}deg) translateZ(-764px)`);
+            });
+        } else {
+            $(".turn").css('transform', function(index) {
+                // 초기 상태로 돌아가도록 설정
+                var rotateY = 45 * index;
+                return `rotateY(${rotateY}deg) translateZ(0)`;
+            });
+        }
+
+
+        if (sc>= 2800) {
+            $('.sign').removeClass('on')
+            $('.sign').addClass('on')
+        }else {
+        $('.sign').removeClass('on')
+              }
+        
+    })
+
+    });
+
+
+
 
 
 // gnb li를 클릭할때 순번을 찾고 article의 높이값에 곱해서 스크롤top을 움직여라
@@ -102,7 +127,7 @@ $('article').mousewheel(function(event,delta){
 
 
 
-$('figure').click(function(){
+$('.switch').click(function(){
 
     // $('.btn1').removeClass('')
     $('.btn1').toggleClass('on')
@@ -119,16 +144,16 @@ $('figure').click(function(){
 
 
 
-//마우스가 움직이때마다 각 박스의 이미지가 커서값을 받아서 움직인다.
-// $('article').mousemove(function(e){
+// 마우스가 움직이때마다 각 박스의 이미지가 커서값을 받아서 움직인다.
+$('article').mousemove(function(e){
 
-//     var posX = e.pageX;
-//     var posY = e.pageY;
+    var posX = e.pageX;
+    var posY = e.pageY;
 
-//     $('.tk1').css({'top':20-(posY/30),'right':20-(posX/30)})
-//     $('.tk2').css({'top':20-(posY/30),'right':20-(posX/30)})
-//     $('.tk3').css({'bottom':20-(posY/30),'right':20-(posX/30)})
-// })
+    $('.tk1').css({'top':150-(posY/20),'left':200-(posX/20)})
+    $('.tk2').css({'top':300-(posY/20),'right':170-(posX/20)})
+    $('.tk3').css({'bottom':150-(posY/20),'left':100-(posX/20)})
+})
 
 
 $('section>article:nth-child(4) li').click(function() {
@@ -145,21 +170,6 @@ $('section>article:nth-child(4) li').click(function() {
 
   
 })
-
-// .arrow를 클릭하면 네비와 섹션이 사라지고 .sideArtwork가 나타남
-$('.arrow').click(function(){
-
-    $('section, nav').css({'display':'none'})
-    $('.sideArtwork').fadeIn()
-})
-// .out를 클릭하면 .sideArtwork가 사라지고 nav와 메인이 나타남
-$('.out').click(function(){
-
-    $('.sideArtwork').css({'display':'none'})
-    $('nav, .main').fadeIn()
-})
-
-
 
 
 

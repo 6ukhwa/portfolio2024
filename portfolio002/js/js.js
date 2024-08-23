@@ -54,13 +54,13 @@ $(document).ready(function(){
 
 
 //.pro_icon i를 클릭하면 빨간색으로 바뀐다.
-    $('.pro_icon i').click(function(){
+    // $('.pro_icon i').click(function(){
 
-        var ht = $(this).index();
-        $(this).eq(ht).toggleClass('on')
-        // $(this).eq(ht).removeClass('on')
+    //     var ht = $(this).index();
+    //     $(this).eq(ht).toggleClass('on')
+    //     // $(this).eq(ht).removeClass('on')
 
-    })
+    // })
 
 
     // btn_area를 클릭하면 warning p이 보인다.
@@ -162,45 +162,6 @@ $(document).ready(function(){
     })
 
 
-    // pro_icon img를 클릭했을때 숫자가 증가하게 만들고
-    // 그 숫자를 cart em에 출력해라
-    let ct = 0;
-    let price = 0;
-    $('.pro_icon img').click(function(){
-
-        ct++
-        console.log(ct);
-        $('.cart em').text(ct)
-
-        // popUp_pd의 p가 사라져아
-        $('.popUp_pd').find('p').css({'display':'none'});
-        // popUp_list가 없어져라
-        $('.popUp_list').css({'display':'block'})
-
-
-        // 나의 부모 안에서 price를 찾아서 금액을 출력해라
-        // 나의 부모안에서 p 안에 있는 img태그를 출력해라
-        let txt = $(this).parents('.pro_top').find('.price').find('span').text()
-        let tt = $(this).parents('.pro_top').find('p').html()
-        let tn = $(this).parents('.pro_top').find('strong').text()
-        
-
-        let nt = Number(txt)
-
-        console.log(nt);
-        // popUp_pd에 popUp_list를 계속 누적되게 출력해라
-        // $('.popUp_pd').find('.popUp_list').append('<div>'+(tt+tn+txt)+'</div>')
-        $('.popUp_pd').find('.popUp_list').append('<div>'+('<div>'+tt+'</div>')+('<div>'+tn+'</div>')+('<div>'+txt+'<span>원</span></div>')+'</div>')
-
-        price +=nt
-
-        $('.total').find('em').text(price.toLocaleString())
-     
-
-    })
-
-
-
         // empty를 click 했을때 장바구니의 숫자가 0이되어라.
         // shop의 list를 비워라
         $('.empty').click(function(){
@@ -227,47 +188,93 @@ $(document).ready(function(){
         $('.big_img li').eq(ig).fadeIn()
     })
 
-    // 제품 자동 슬라이드
+
+
+
+  // 기존의 pro_icon i와 img에 대한 이벤트 핸들러를 제거하고, on 메서드를 사용하여 이벤트 위임 추가
+$(document).on('click', '.pro_icon i', function() {
+    $(this).toggleClass('on');
+
+});
+
+let ct = 0;
+let price = 0;
+$(document).on('click', '.pro_icon img', function() {
+    ct++
+    console.log(ct);
+    $('.cart em').text(ct)
+
+    // popUp_pd의 p가 사라져아
+    $('.popUp_pd').find('p').css({'display':'none'});
+    // popUp_list가 없어져라
+    $('.popUp_list').css({'display':'block'})
+
+
+    // 나의 부모 안에서 price를 찾아서 금액을 출력해라
+    // 나의 부모안에서 p 안에 있는 img태그를 출력해라
+    let txt = $(this).parents('.pro_top').find('.price').find('span').text()
+    let tt = $(this).parents('.pro_top').find('p').html()
+    let tn = $(this).parents('.pro_top').find('strong').text()
     
-    // var pro = 0;
 
-    // // button을 클릭했을때 ul이 -390씩 왼쪽으로 이동해라
-    // $('.product button').click(function(){
-    //     pro++
-    //     console.log(pro);
+    let nt = Number(txt)
 
-    //     // pro보다 1이 적은 순번요소의 li를 복제해서 ul안에 자손자중 막내로 추가해라.
+    console.log(nt);
+    // popUp_pd에 popUp_list를 계속 누적되게 출력해라
+    // $('.popUp_pd').find('.popUp_list').append('<div>'+(tt+tn+txt)+'</div>')
+    $('.popUp_pd').find('.popUp_list').append('<div>'+('<div>'+tt+'</div>')+('<div>'+tn+'</div>')+('<div>'+txt+'<span>원</span></div>')+'</div>')
 
-    //     $('.product ul').width(1198+(460*pro))
+    price +=nt
 
-    //     $('.product ul li').eq(pro-1).clone().appendTo('.product ul')
+    $('.total').find('em').text(price.toLocaleString())
+  
+    // alert('장바구니에 추가되었습니다!');
 
-
-    //     $('.product ul').stop().animate({'left':-460*pro});
-       
-
-    // });
-
-    // let slide = setInterval(function(){
-
-    //     $('.product button').trigger('click')
-    // },1500)
-
-    // $('.product ul').mouseenter(function(){
-
-    //     clearInterval(slide)
-    // })
-
-    // $('.product ul').mouseleave(function(){
-
-    //     let slide = setInterval(function(){
-
-    //         $('.product button').trigger('click')
-    //     },1500)
-
-    // })
+});
 
 
+
+
+// 자동 슬라이드 및 버튼 클릭 기능 등 기존 코드 유지
+var pro = 0;
+var slide;
+
+$('.product button').click(function(){
+    pro++;
+    console.log(pro);
+
+    $('.product ul').width(1198 + (440 * pro));
+    $('.product ul li').eq(pro - 1).clone().appendTo('.product ul');
+    $('.product ul').stop().animate({'left': -440 * pro});
+});
+
+slide = setInterval(function(){
+    $('.product button').trigger('click');
+}, 2500);
+
+$('.product ul').mouseenter(function(){
+    clearInterval(slide);
+});
+
+$('.product ul').mouseleave(function(){
+    slide = setInterval(function(){
+        $('.product button').trigger('click');
+    }, 2500);
+
+
+});
+
+
+$('.sc_btn').click(function(){
+
+    $('.search_notice').removeClass('on')
+    $('.search_notice').addClass('on')
+})
+$('.search_btn').click(function(){
+
+    $('.search_notice').removeClass('on')
+    
+})
 
 
 })
