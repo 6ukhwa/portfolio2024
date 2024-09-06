@@ -1,0 +1,1131 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+    color: #323232;
+}
+a {
+    color: #323232;
+    text-decoration: none;
+}
+ul {list-style: none;}
+img {
+    vertical-align: bottom;
+}
+body {
+    font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* 스크롤바 설정 */
+::-webkit-scrollbar {
+    width: 15px; /* 스크롤 막대의 너비 */
+
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #0085FF; /* 스크롤 막대 색상 */
+    border-radius: 10px;
+    border: 2px solid #323232;
+
+  }
+  
+
+/* 헤더 설정############################ */
+header {
+    position: pixed;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #FFFBEC; */
+    background-image: url(img/chekerboard.jpg);
+    cursor: default;
+}
+header>p {
+    font-size: 25px;
+    color: #0085FF;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+header .thisis {
+    width: 400px;
+    height: 50px;
+    background-image: url(img/thisis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    left: 12%;
+}
+header .title {
+    width: 60%;
+    height: 500px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+.title .title1 {
+    position: relative;
+}
+.title .title1 img:nth-child(2) {
+    position: absolute;
+    left: 15%
+}
+.title .title1 img:nth-child(3) {
+    position: absolute;
+    left: 28%
+}
+.title .title1 img:nth-child(4) {
+    position: absolute;
+    left: 42%
+}
+.title .title2 {
+    /* margin-left: 100px; */
+    margin-top: -30px;
+    position: relative;
+}
+.title .title2 img:nth-child(2) {
+    position: absolute;
+    left: 18%
+}
+.title .title2 img:nth-child(3) {
+    position: absolute;
+    left: 31%
+}
+.title .title2 img:nth-child(4) {
+    position: absolute;
+    left: 45%
+}
+.title .title2 img:nth-child(5) {
+    position: absolute;
+    left: 61%
+}
+.title img {
+    animation: title 1.5s infinite;
+    transform-origin: bottom center;
+}
+@keyframes title {
+    0% {transform: rotate(10deg);}
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(10deg);}
+}
+.title figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    background-color: #fff;
+    border: 3px solid #323232;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.title figcaption p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.blackStar {
+    width: 35px;
+    height: 35px;
+    background-image: url(img/black.png);
+    background-size: cover;
+    position: absolute;
+    left: 52%;
+    top: 40%;
+}
+.smile1 {
+    width: 160px;
+    height: 160px;
+    background-image: url(img/smile1.png);
+    background-size: cover;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    animation: smile 5s linear infinite;
+}
+.smile2 {
+    width: 280px;
+    height: 280px;
+    background-image: url(img/smile2.png);
+    background-size: cover;
+    position: absolute;
+    top: 15%;
+    right: 20%;
+}
+.spring {
+    width: 280px;
+    height: 280px;
+    background-image: url(img/spring.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    padding: 10px;
+}
+.spring:hover {
+    animation: undefined-easeOutElastic 1s;
+}
+@keyframes smile {
+    100% {transform: rotateZ(360deg);}
+}
+@keyframes undefined-easeOutElastic {
+	0% {
+		transform: translateY(0%);
+	}
+
+	16% {
+		transform: translateY(-32.27%);
+	}
+
+	28% {
+		transform: translateY(14.88%);
+	}
+
+	44% {
+		transform: translateY(-4.63%);
+	}
+
+	59% {
+		transform: translateY(2.36%);
+	}
+
+	73% {
+		transform: translateY(0.58%);
+	}
+
+	88% {
+		transform: translateY(1.8%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+
+}
+header button {
+    width: 200px;
+    height: 60px;
+    /* border: none; */
+    background-color: #fff;
+    border: 2px solid #323232;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    margin-left: -100px;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0;
+    animation: click 1s 0.5s ease-out forwards;
+}
+@keyframes click {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+header button img {
+    width: 120px;
+    transition: all 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -15px;
+}
+.clickW {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+header button:hover {
+    background-color: #323232;
+}
+header button:hover .clickW {
+    opacity: 1;
+}
+.blue1 {
+    font-size: 30px;
+    position: absolute;
+    right: 15%;
+    bottom: 38%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.blue2 {
+    font-size: 30px;
+    position: absolute;
+    right: 7%;
+    top: 20%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.blue3 {
+    font-size: 12px;
+    position: absolute;
+    right: 44%;
+    top: 40%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+header .smile1:hover ~ .blue1 {
+    opacity: 1;
+}
+header .smile2:hover ~ .blue2 {
+    opacity: 1;
+}
+header .blackStar:hover ~ .blue3 {
+    opacity: 1;
+}
+
+
+
+/* gnb설정#################### */
+nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #FFE381;
+    border-bottom: 1px solid #ccc;
+    display: none;
+}
+.nav_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_inner ul {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.nav_inner ul li {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    padding: 20px;
+}
+.nav_inner ul li.on {
+    color: #0085FF;
+}
+.nav_inner ul li:hover {
+    color: #0085FF;
+}
+
+/* 메인설정########################################## */
+
+main {
+    display: none;
+}
+main>article {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFBEC;
+}
+main>article:nth-child(1) {
+    position: relative;
+}
+.profile {
+    width: 80%;
+    height: 80%;
+    background-color: #FFE381;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 35px;
+    border-radius: 40px;
+}
+.profile .name {
+    width: 400px;
+    height: 400px;
+    background-image: url(img/profile.png);
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    transform: scale(0);
+    animation: name 1s 0.5s ease-out forwards;
+}
+@keyframes name {
+    0% {transform: scale(0);}
+    80% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.keywords {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: all 0.8s;
+    transform: translateY(0px);
+}
+.keywords>div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #323232;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -40px;
+    transition: all 1s 0.5s;
+}
+.keywords>div p {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+
+}
+.keywords>div:nth-child(1) {
+    background-color: #FF6363;
+}
+.keywords>div:nth-child(2) {
+    background-color: #FF8F60;
+}
+.keywords>div:nth-child(3) {
+    background-color: #FFFA8C;
+}
+.keywords>div:nth-child(4) {
+    background-color: #A8FFA6;
+}
+.keywords>div:nth-child(5) {
+    background-color: #8BC7FF;
+}
+.keywords>div:nth-child(6) {
+    background-color: #A89AFF;
+}
+.keywords>div:nth-child(7) {
+    background-color: #EB6FFF;
+}
+
+
+
+.keywords.on {
+    opacity: 1;
+    transform: translateY(-150px);
+}
+.keywords>div:nth-child(1).on {
+    transform: rotate(-45deg) translateX(-380px);
+}
+.keywords>div:nth-child(2).on {
+    transform: rotate(-30deg) translateX(-280px);
+}
+.keywords>div:nth-child(3).on {
+    transform: rotate(-15deg) translateX(-150px);
+}
+.keywords>div:nth-child(4).on {
+    transform: rotate(0deg) translateX(0);
+}
+.keywords>div:nth-child(5).on {
+    transform: rotate(15deg) translateX(150px);
+}
+.keywords>div:nth-child(6).on {
+    transform: rotate(30deg) translateX(280px);
+}
+.keywords>div:nth-child(7).on {
+    transform: rotate(45deg) translateX(380px);
+}
+
+/* 소개란################################# */
+.profile figcaption {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.profile figcaption i {
+    color: #fff;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.profile figcaption strong {
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.profile figcaption p {
+    font-size: 20px;
+}
+.profile figcaption a {
+    font-size: 20px;
+    text-decoration: underline;
+}
+.profile aside h2 {
+    color: #0085FF;
+}
+
+
+/* 교육, 자격증###################### */
+.proLeft {
+    position: absolute;
+    left: 75%;
+    top: 20%;
+}
+.proLeft h2 {
+    margin-left: -10px;
+    font-size: 30px;
+}
+.proLeft p {
+    margin-top: 15px;
+    font-weight: 600;
+}
+.proLeft span {
+    float: left;
+    margin-right: 10px;
+    height: 40px;
+    color: #777;
+}
+.proLeft span::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.proLeft .edu {
+    margin-bottom: 70px;
+    width: 300px;
+}
+
+
+/* 스킬목록##################### */
+.skill {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.skill h2 {
+    font-size: 30px;
+}
+.program {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.program p {
+    margin-left: 5px;
+}
+.program img {
+    width: 40px;
+    margin-right: 15px;
+}
+.program>div {
+    display: flex;
+    align-items: center;
+}
+
+/* 프로그래스바 설정#################### */
+
+.progressBar {
+    width: 180px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.progressBar:hover {
+    box-shadow: 3px 3px 5px #927d31;
+}
+.progressBar>div {
+    height: 20px;
+    background-color: #0085FF;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.html {
+    width: 90%;
+    animation: html 3s;
+}
+.css {
+    width: 80%;
+    animation: css 3s;
+}
+.javascript {
+    width: 60%;
+    animation: javascript 3s;
+}
+.jquery {
+    width: 70%;
+    animation: jquery 3s;
+}
+.potoshop {
+    width: 90%;
+    animation: potoshop 3s;
+}
+.aillustrator {
+    width: 70%;
+    animation: aillustrator 3s;
+}
+.figma {
+    width: 90%;
+    animation: figma 3s ease;
+}
+
+@keyframes html {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+@keyframes css {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+@keyframes javascript {
+    0% {width: 0%;}
+    100% {width: 60%;}
+}
+@keyframes jquery {
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+@keyframes potoshop {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+@keyframes aillustrator {
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+@keyframes figma {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+
+
+
+
+/* 두번째 아티클######################## */
+
+article:nth-child(2) {
+}
+.project {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    /* background-image: url(img/chekerboard.jpg); */
+}
+.project>section {
+    width: 380px;
+    height: 600px;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 2px solid #323232;
+    margin-top: 80px;
+}
+.project section:nth-child(1) {
+    position: relative;
+}
+.project section:nth-child(1) .pageBtn {
+    position: absolute;
+    left: 0;
+    top: 70%;
+
+}
+.project section:nth-child(1) figcaption {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+.project section:nth-child(1) figcaption h3 {
+    font-size: 25px;
+    color: #fff;
+}
+.project section:nth-child(1) figcaption p {
+    color: #fff;
+}
+.project section:nth-child(1) figure {
+    background-image: url(img/project1.jpg);
+    background-size: cover;
+    background-position: left top;
+    margin-top: 37px;
+    width: 100%;
+    height: 200%;
+    border-radius: 10px;
+}
+.opacity1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.project section:nth-child(1):hover .opacity1 {
+    opacity: 1;
+}
+.project section:nth-child(1):hover figure {
+    animation: background1 10s linear;
+}
+.project section:nth-child(1):hover figcaption {
+    opacity: 1;
+}
+.project section:nth-child(1):hover .pageBtn {
+    opacity: 1;
+}
+.project section:nth-child(1) .topBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid #323232;
+}
+.project section:nth-child(1) .topBar .dot {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+
+/* 두번째 섹션 */
+.project section:nth-child(2) {
+    position: relative;
+}
+.project section:nth-child(2) .pageBtn {
+    position: absolute;
+    left: 0;
+    top: 70%;
+}
+.project section:nth-child(2) figcaption {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+.project section:nth-child(2) figcaption h3 {
+    font-size: 25px;
+    color: #fff;
+}
+.project section:nth-child(2) figcaption p {
+    color: #fff;
+}
+.project section:nth-child(2) figure {
+    background-image: url(img/project2.jpg);
+    background-size: cover;
+    background-position: left top;
+    width: 100%;
+    height: 200%;
+    margin-top: 37px;
+    border-radius: 5px;
+}
+.opacity2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.project section:nth-child(2):hover .opacity2 {
+    opacity: 1;
+}
+.project section:nth-child(2):hover figure {
+    animation: background1 10s linear;
+}
+.project section:nth-child(2):hover figcaption {
+    opacity: 1;
+}
+.project section:nth-child(2):hover .pageBtn {
+    opacity: 1;
+}
+.project section:nth-child(2) .topBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid #323232;
+}
+.project section:nth-child(2) .topBar .dot {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+
+/* 세번째 섹션 */
+.project section:nth-child(3) {
+    position: relative;
+}
+.project section:nth-child(3) .pageBtn {
+    position: absolute;
+    left: 0%;
+    top: 70%;
+}
+.project section:nth-child(3) figcaption {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+.project section:nth-child(3) figcaption h3 {
+    font-size: 25px;
+    color: #fff;
+}
+.project section:nth-child(3) figcaption p {
+    color: #fff;
+}
+.project section:nth-child(3) figure {
+    background-image: url(img/project3.jpg);
+    background-size: contain;
+    background-position: left top;
+    width: 100%;
+    height: 200%;
+    margin-top: 37px;
+    border-radius: 5px;
+}
+.opacity3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.project section:nth-child(3):hover .opacity3 {
+    opacity: 1;
+}
+.project section:nth-child(3):hover figure {
+    animation: background1 10s linear;
+}
+.project section:nth-child(3):hover figcaption {
+    opacity: 1;
+}
+.project section:nth-child(3):hover .pageBtn {
+    opacity: 1;
+}
+.project section:nth-child(3) .topBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid #323232;
+}
+.project section:nth-child(3) .topBar .dot {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+/* bg 애니메이션 */
+@keyframes background1 {
+    0% {transform: translateY(0%);}
+    100%{transform: translateY(-50%);}
+}
+.pageBtn {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 40px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.pageBtn>div {
+    border: 1px solid #fff;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s;
+}
+.pageBtn div:hover {
+    background-color: #fff;
+    color: #323232;
+}
+.pageBtn div:hover a {
+    color: #323232;
+}
+.pageBtn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.topBar {
+    width: 100%;
+    height: 40px;
+    background-color: #FFE381;
+}
+.dot {
+    width: 40px;
+    height: 100%;
+}
+.dot img {
+    margin-top: 15px;
+}
+.project figcaption {
+    transition: all 0.8s;
+}
+
+
+
+
+/* 팝업창 설정 */
+.blackBg {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.blackBg.on {
+    display: block;
+}
+.close {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 12%;
+    top: 50%;
+    background-color: #FFE381;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+.close i {
+    font-size: 35px;
+    color: #323232;
+    transition: all 0.3s;
+    margin-left: 22px;
+    margin-top: 18px;
+}
+.close:hover i {
+    transform: rotateZ(180deg);
+}
+.close.on {
+    display: block;
+}
+.bnj {
+    width: 1250px;
+    height: 800px;
+    background-color: #ccc;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 40px;
+    border-radius: 35px;
+    border: 2px solid #323232;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    display: none;
+}
+.bnj.on {
+    display: block;
+}
+.bnj .detail {
+    width: 100%;
+    height: 1250%;
+    background-image: url(img/concept1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 40px;
+}
+.bnj .pop_topBar {
+    width: 100%;
+    height: 40px;
+    background-color: #FFE381;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border: 2px solid #323232;
+    position: fixed;
+    left: -2px;top: -2px;
+}
+.bnj .pop_topBar img {
+    position: absolute;
+    right: 5%;
+    margin-top: 15px;
+}
+
+/* 동물 */
+.kap {
+    width: 1250px;
+    height: 800px;
+    background-color: #ccc;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 40px;
+    border-radius: 35px;
+    border: 2px solid #323232;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    display: none;
+}
+.kap.on {
+    display: block;
+}
+.kap .detail {
+    width: 100%;
+    height: 1020%;
+    background-image: url(img/concept2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 40px;
+}
+.kap .pop_topBar {
+    width: 100%;
+    height: 40px;
+    background-color: #FFE381;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border: 2px solid #323232;
+    position: fixed;
+    left: -2px;top: -2px;
+}
+.kap .pop_topBar img {
+    position: absolute;
+    right: 5%;
+    margin-top: 15px;
+}
+
+
+/* 이도현 */
+.ldh {
+    width: 1250px;
+    height: 800px;
+    background-color: #ccc;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 40px;
+    border-radius: 35px;
+    border: 2px solid #323232;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    display: none;
+}
+.ldh.on {
+    display: block;
+}
+.ldh .detail {
+    width: 100%;
+    height: 1290%;
+    background-image: url(img/concept3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 40px;
+}
+.ldh .pop_topBar {
+    width: 100%;
+    height: 40px;
+    background-color: #FFE381;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border: 2px solid #323232;
+    position: fixed;
+    left: -2px;top: -2px;
+}
+.ldh .pop_topBar img {
+    position: absolute;
+    right: 5%;
+    margin-top: 15px;
+}
+
+
+
+
+
+/* 미디어쿼리--------------------- */
+
+
+/* 모바일구간 */
+@media(max-width:600px){}
+
+
+/* 태블릿구간 */
+@media(min-width:601px) and (max-width:768px) {}
+
+
+/* 데스크탑 구간 */
+@media(min-width:769px) {}
+
+/* 와이드데스크탑 */
+/* 1280px 이상일때 설정 */
+@media(min-width:1280px) {
+    .nav_inner, .project {
+        width: 1240px;
+        margin: 0 auto;
+    }
+}
