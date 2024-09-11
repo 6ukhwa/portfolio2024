@@ -10,7 +10,7 @@ $(document).ready(function(){
     let sht = $(window).height()
     
     // 각 gnb li에 해당하는 위치에 도달하면 addclass
-    for(var a=0; a<=2; a++){
+    for(var a=0; a<=3; a++){
         if(sc>=sht*a && sc<sht*(a+1)) {
             $('.gnb li').removeClass('on');
             $('.gnb li').eq(a).addClass('on')
@@ -72,6 +72,15 @@ $(document).ready(function(){
         $('.ldh').removeClass('on')
         $('.close').removeClass('on')
     })
+
+    // 구름 엔딩
+    setInterval(function() {
+        $('.cloud img').toggle();
+      }, 600);
+
+
+
+
 
 
 }); //돈땃쥐
