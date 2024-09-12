@@ -17,6 +17,9 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
 
+    <!-- 마우스 휠 효과 CDN -->
+    <script src="js/jquery.mousewheel.min.js"></script>
+
     <!-- 외부 스크립트 -->
     <script src="js/js.js"></script>
 
@@ -73,6 +76,7 @@
             <ul class="gnb">
                 <li class="on">PROFILE</li>
                 <li>PROJECT</li>
+                <li>THANK YOU</li>
             </ul>
         </div>
     </nav>
@@ -249,10 +253,10 @@
 
 
             <!-- 팝업창 설정 -->
-            <div class="blackBg"></div>
-            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="blackBg">
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
             <!-- 1번팝업 -->
-                <div class="bnj">
+                <div class="bnj pop_pop">
                     <div class="pop_topBar">
                         <img src="img/dot.png" alt="">
                     </div>
@@ -261,7 +265,7 @@
 
 
             <!-- 2번 팝업 -->
-            <div class="kap">
+            <div class="kap pop_pop">
                 <div class="pop_topBar">
                     <img src="img/dot.png" alt="">
                 </div>
@@ -270,13 +274,15 @@
 
 
             <!-- 3번 팝업 -->
-            <div class="ldh">
+            <div class="ldh pop_pop">
                 <div class="pop_topBar">
                     <img src="img/dot.png" alt="">
                 </div>
                 <div class="detail"></div>
             </div>
 
+            </div>
+            
             </div>
 
 
