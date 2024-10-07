@@ -54,7 +54,7 @@ header>p {
     padding-top: 20px;
 }
 header .thisis {
-    width: 17%;
+    width: 260px;
     height: 50px;
     background-image: url(img/thisis.png);
     background-size: contain;
@@ -64,7 +64,7 @@ header .thisis {
     left: 12%;
 }
 header .title {
-    width: 60%;
+    width: 950px;
     height: 55%;
     position: absolute;
     top: 25%;
@@ -74,20 +74,19 @@ header .title {
     position: relative;
 }
 .title .title1>img {
-    width: 17%;
-    height: 100%;
+    width: 190px;
 }
 .title .title1 img:nth-child(2) {
     position: absolute;
-    left: 15%
+    left: 18%;
 }
 .title .title1 img:nth-child(3) {
     position: absolute;
-    left: 30%
+    left: 35%;
 }
 .title .title1 img:nth-child(4) {
     position: absolute;
-    left: 44%
+    left: 50%;
 }
 .title .title2 {
     /* margin-left: 100px; */
@@ -95,25 +94,24 @@ header .title {
     position: relative;
 }
 .title .title2>img {
-    width: 17%;
-    height: 100%;
+    width: 190px;
 
 }
 .title .title2 img:nth-child(2) {
     position: absolute;
-    left: 16%
+    left: 18%;
 }
 .title .title2 img:nth-child(3) {
     position: absolute;
-    left: 31%
+    left: 35%;
 }
 .title .title2 img:nth-child(4) {
     position: absolute;
-    left: 45%
+    left: 50%;
 }
 .title .title2 img:nth-child(5) {
     position: absolute;
-    left: 61%
+    left: 68%;
 }
 .title img {
     animation: title 1.5s infinite;
@@ -151,7 +149,7 @@ header .title {
     background-image: url(img/black.png);
     background-size: cover;
     position: absolute;
-    right: 20%;
+    right: 10%;
     top: 10%;
 }
 .smile1 {
@@ -180,7 +178,7 @@ header .title {
     background-size: cover;
     position: absolute;
     bottom: 18%;
-    left: 58%;
+    right: 25%;
     padding: 10px;
 }
 .spring:hover {
