@@ -27,11 +27,13 @@ $(document).ready(function(){
         $('nav').find('a').css({'color':'#454545'})
         $('.util').find('i').css({'color':'#454545'})
         $('.second').show();
+        $('.first').hide()
     }else {
         $('header').css({'background-color':'transparent','color':'#fff'})
         $('nav').find('a').css({'color':'#fff'})
         $('.util').find('i').css({'color':'#fff'})
         $('.second').hide()
+        $('.first').show();
 }
         
     });
@@ -44,39 +46,29 @@ $(document).ready(function(){
         })
 
 
-// 동물 슬라이드 설정
-    $('.btn li').click(function(){
+    // 히어로 슬라이드 설정
+    let currentIndex = 0;
 
-        var i = $(this).index()
+            function toggleBackground() {
+                if (currentIndex === 0) {
+                    // hero_bg2가 위에 있는 상태에서 fadeIn, fadeOut
+                    $('.hero_bg2').fadeIn(800, function() {
+                        $('.hero_bg1').fadeOut(0); // 빠르게 fadeOut 처리
+                    });
+                } else {
+                    // hero_bg1이 위에 있는 상태에서 fadeIn, fadeOut
+                    $('.hero_bg1').fadeIn(0, function() {
+                        $('.hero_bg2').fadeOut(800); // 빠르게 fadeOut 처리
+                    });
+                }
+                currentIndex = (currentIndex + 1) % 2;
+            }
 
-        $('.btn li').removeClass('on')
-        $(this).addClass('on')
-    
-        $('.images li').eq(i-1).stop().animate({'opacity':'0'},800);
-        $('.images li').eq(i).stop().animate({'opacity':'1'},800)
+            // 5초마다 배경 전환
+            setInterval(toggleBackground, 5000);    
 
 
-        });
-      
-    var a = 0;
-        function timer(){
-
-            a++;
-            if(a==3)a=0;
-            $('.btn li').eq(a).trigger('click')
-        }
-
-    var slide = setInterval(timer,2000)
-
-        $('.images').mouseenter(function(){
-            clearInterval(slide)
-        })
-
-        $('.images').mouseleave(function(){
-            slide = setInterval(timer,2000)
-        })
-
-      
+            
     // 공지 슬라이드 설정
         var ii=0;
         setInterval(function(){
