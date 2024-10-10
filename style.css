@@ -64,11 +64,12 @@ header .thisis {
     left: 12%;
 }
 header .title {
-    width: 950px;
+    width: 50%;
     height: 55%;
     position: absolute;
     top: 25%;
     left: 10%;
+    background-color: red;
 }
 .title .title1 {
     position: relative;
@@ -1120,7 +1121,6 @@ article:nth-child(3) {
 }
 .cloud {
     position: absolute;
-    background-color: green;
     width: 350px;
 }
 .cloud img {
@@ -1142,7 +1142,7 @@ article:nth-child(3) {
     header .title {
         top: 32%;
         width: 90%;
-        height: 33%;
+        height: 300px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -1221,6 +1221,43 @@ article:nth-child(3) {
     .blue2 {
         top: 10%;
         font-size: 20px;
+    }
+    /* 프로젝트 섹션 */
+    .project {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        background-color: red;
+    }
+    .project>section {
+        width: 80%;
+        height: 200px;
+        border-radius: 35px;
+        overflow: hidden;
+        border: 2px solid #323232;
+    }
+    /* 엔딩섹션 */
+    .thu img {
+        width: 250px;
+        margin-top: 200px;
+    }
+    .cloud {
+        position: absolute;
+        width: 250px;
+    }
+    .cloud img {
+        position: absolute;
+        right: 30px;
+        bottom: -30px;
+    }
+    .cloud img:nth-child(1) {
+        width: 250px;
+    }
+    .cloud img:nth-child(2) {
+        width: 217px;
     }
 }
 
@@ -1318,6 +1355,26 @@ article:nth-child(3) {
         top: 10%;
         font-size: 20px;
     }
+    /* 엔딩섹션 */
+    .thu img {
+        width: 250px;
+        margin-top: 200px;
+    }
+    .cloud {
+        position: absolute;
+        width: 250px;
+    }
+    .cloud img {
+        position: absolute;
+        right: 30px;
+        bottom: -30px;
+    }
+    .cloud img:nth-child(1) {
+        width: 250px;
+    }
+    .cloud img:nth-child(2) {
+        width: 217px;
+    }
 }
 
 
@@ -1413,6 +1470,26 @@ article:nth-child(3) {
     .blue2 {
         top: 12%;
         font-size: 20px;
+    }
+    /* 엔딩섹션 */
+    .thu img {
+        width: 400px;
+        margin-top: 200px;
+    }
+    .cloud {
+        position: absolute;
+        width: 250px;
+    }
+    .cloud img {
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+    }
+    .cloud img:nth-child(1) {
+        width: 400px;
+    }
+    .cloud img:nth-child(2) {
+        width: 347px;
     }
 }
 
