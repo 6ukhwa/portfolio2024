@@ -38,20 +38,31 @@ body {
 
 /* 헤더 설정############################ */
 header {
-    position: pixed;
+    position: fixed;
     width: 100%;
     height: 100vh;
-    /* background-color: #FFFBEC; */
     background-image: url(img/chekerboard.jpg);
     cursor: default;
 }
-header>p {
+.header_inner {
+    position: relative;
+    height: 100vh;
+}
+.header_inner>p {
     font-size: 25px;
     color: #0085FF;
     font-weight: 900;
     width: 100%;
     text-align: center;
     padding-top: 20px;
+}
+
+header .title {
+    width: 950px;
+    height: 480px;
+    position: absolute;
+    bottom: 28%;
+    left: 10px;
 }
 header .thisis {
     width: 260px;
@@ -60,19 +71,12 @@ header .thisis {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 20%;
-    left: 12%;
-}
-header .title {
-    width: 50%;
-    height: 55%;
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    background-color: red;
+    top: 0;
+    left: 20px;
 }
 .title .title1 {
     position: relative;
+    margin-top: 50px;
 }
 .title .title1>img {
     width: 190px;
@@ -125,23 +129,14 @@ header .title {
 }
 .title figcaption {
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left: 50px;
-    background-color: #fff;
-    border: 3px solid #323232;
-    width: 300px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    width: 50%;
+    height: 40px;
 }
 .title figcaption p {
     font-size: 25px;
-    text-align: center;
+    letter-spacing: 2px;
 }
 
 .blackStar {
@@ -154,32 +149,32 @@ header .title {
     top: 10%;
 }
 .smile1 {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     background-image: url(img/smile1.png);
     background-size: cover;
     position: absolute;
-    left: 80%;
-    bottom: 20%;
+    right: 0;
+    bottom: 280px;
     animation: smile 5s linear infinite;
 }
 .smile2 {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     background-image: url(img/smile2.png);
     background-size: cover;
     position: absolute;
-    top: 15%;
-    left: 65%;
+    top: 100px;
+    right: 10%;
 }
 .spring {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     background-image: url(img/spring.png);
     background-size: cover;
     position: absolute;
     bottom: 18%;
-    right: 25%;
+    right: 12%;
     padding: 10px;
 }
 .spring:hover {
@@ -279,16 +274,16 @@ header button:hover .clickW {
 .blue1 {
     font-size: 30px;
     position: absolute;
-    right: 15%;
-    bottom: 38%;
+    right: 30px;
+    bottom: 420px;
     opacity: 0;
     transition: all 0.3s;
 }
 .blue2 {
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
-    right: 7%;
-    top: 20%;
+    right: 25px;
+    top: 70px;
     opacity: 0;
     transition: all 0.3s;
 }
@@ -321,7 +316,7 @@ nav {
 .nav_inner ul {
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 30%;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -337,7 +332,19 @@ nav {
 .nav_inner ul li:hover {
     color: #0085FF;
 }
+.hamburger {
+    font-size: 24px;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+.hamburger i {
+    color: #fff;
 
+}
 /* 메인설정########################################## */
 
 main {
@@ -684,7 +691,7 @@ article:nth-child(2) {
 .project section:nth-child(1) figure {
     background-image: url(img/project1.jpg);
     background-size: cover;
-    background-position: left top;
+    background-position: center top;
     margin-top: 37px;
     width: 100%;
     height: 200%;
@@ -756,7 +763,7 @@ article:nth-child(2) {
 .project section:nth-child(2) figure {
     background-image: url(img/project2.jpg);
     background-size: cover;
-    background-position: left top;
+    background-position: center top;
     width: 100%;
     height: 200%;
     margin-top: 37px;
@@ -827,8 +834,8 @@ article:nth-child(2) {
 }
 .project section:nth-child(3) figure {
     background-image: url(img/project3.jpg);
-    background-size: contain;
-    background-position: left top;
+    background-size: cover;
+    background-position: center top;
     width: 100%;
     height: 200%;
     margin-top: 37px;
@@ -1134,111 +1141,94 @@ article:nth-child(3) {
 
 /* 모바일구간 */
 @media(max-width:600px){
-    header .thisis {
-        top: 29%;
-        width: 30%;
-        height: 60px;
-    }
-    header .title {
-        top: 32%;
-        width: 90%;
-        height: 300px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .title figcaption {
-        bottom: 5%;
-        left: 5%;
-        border: 1px solid #323232;
-        width: 200px;
-        height: 50px;
-    }
-    .title figcaption p {
-        font-size: 16px;
-        text-align: center;
-    }
-    
-    .title .title1>img {
-        width: 23%;
-        height: 100%;
-    }
-    .title .title1 img:nth-child(2) {
-        position: absolute;
-        left: 20%
-    }
-    .title .title1 img:nth-child(3) {
-        position: absolute;
-        left: 40%
-    }
-    .title .title1 img:nth-child(4) {
-        position: absolute;
-        left: 58%
-    }
-    .title .title2 {
-        /* margin-left: 100px; */
-        margin-top: -20px;
-        position: relative;
-    }
-    .title .title2>img {
-        width: 23%;
-        height: 100%;
-    
-    }
-    .title .title2 img:nth-child(2) {
-        position: absolute;
-        left: 21%
-    }
-    .title .title2 img:nth-child(3) {
-        position: absolute;
-        left: 40%
-    }
-    .title .title2 img:nth-child(4) {
-        position: absolute;
-        left: 58%
-    }
-    .title .title2 img:nth-child(5) {
-        position: absolute;
-        left: 79%
-    }
-    .spring {
+        /* 헤더 설정 */
+        header .title {
+            width: 330px;
+            height: 260px;
+            position: absolute;
+            bottom: 35%;
+            left: 10px;
+            background-color: red;
+        }
+        header .thisis {
+            width: 180px;
+            height: 20px;
+            background-image: url(img/thisis.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+        .title .title1 {
+            position: relative;
+            margin-top: 40px;
+        }
+        .title .title1>img {
+            width: 90px;
+        }
+        .title .title2 {
+            /* margin-left: 100px; */
+            margin-top: -30px;
+            position: relative;
+        }
+        .title .title2>img {
+            width: 90px;
+        }
+        .smile1 {
+            width: 90px;
+            height: 90px;
+            background-image: url(img/smile1.png);
+            background-size: cover;
+            position: absolute;
+            right: 20px;
+            bottom: 300px;
+            animation: smile 5s linear infinite;
+        }
+        .smile2 {
+            width: 200px;
+            height: 200px;
+            background-image: url(img/smile2.png);
+            background-size: cover;
+            position: absolute;
+            top: 100px;
+            right: 10%;
+        }
+        .spring {
+            width: 170px;
+            height: 170px;
+            background-image: url(img/spring.png);
+            background-size: cover;
+            position: absolute;
+            bottom: 18%;
+            right: 12%;
+            padding: 10px;
+        }
+        .title figcaption {
+            width: 100%;
+            left: 10px;
+        }
+        .title figcaption p {
+            font-size: 16px;
+        }
+    /* 네비 */
+    .nav_inner .gnb {
         display: none;
     }
-    .blackStar {
-        display: none;
-    }
-    .smile1 {
-        display: none;
-    }
-    .smile2 {
-        width: 120px;
-        height: 120px;
-        left: 60%;
-    }
-    .blue1 {
-        top: 50%;
-        font-size: 20px;
-    }
-    .blue2 {
-        top: 10%;
-        font-size: 20px;
-    }
-    /* 프로젝트 섹션 */
-    .project {
+    .hamburger {
         display: flex;
-        flex-direction: column;
-        height: 800px;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        background-color: red;
+        right: 5%;
     }
-    .project>section {
-        width: 80%;
-        height: 200px;
-        border-radius: 35px;
-        overflow: hidden;
-        border: 2px solid #323232;
-    }
+    /* 프로젝트 */
+   .opacity1, .opacity2, .opacity3 {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) figcaption {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) .pageBtn {
+    opacity: 1;
+  }
     /* 엔딩섹션 */
     .thu img {
         width: 250px;
@@ -1264,97 +1254,89 @@ article:nth-child(3) {
 
 /* 태블릿구간 */
 @media(min-width:601px) and (max-width:768px) {
-    header .thisis {
-        top: 29%;
-        width: 24%;
-        height: 50px;
-    }
+    /* 헤더 설정 */
     header .title {
-        top: 32%;
-        width: 80%;
-        height: 33%;
+        width: 650px;
+        height: 330px;
+        position: absolute;
+        bottom: 35%;
+        left: 10px;
     }
-    .title figcaption {
-        bottom: 5%;
-        left: 5%;
-        border: 1px solid #323232;
-        width: 200px;
-        height: 50px;
+    header .thisis {
+        width: 220px;
+        height: 30px;
+        background-image: url(img/thisis.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 20px;
     }
-    .title figcaption p {
-        font-size: 16px;
-        text-align: center;
+    .title .title1 {
+        position: relative;
+        margin-top: 40px;
     }
-    
     .title .title1>img {
-        width: 18%;
-        height: 100%;
-    }
-    .title .title1 img:nth-child(2) {
-        position: absolute;
-        left: 16%
-    }
-    .title .title1 img:nth-child(3) {
-        position: absolute;
-        left: 32%
-    }
-    .title .title1 img:nth-child(4) {
-        position: absolute;
-        left: 46%
+        width: 120px;
     }
     .title .title2 {
         /* margin-left: 100px; */
-        margin-top: -20px;
+        margin-top: -30px;
         position: relative;
     }
     .title .title2>img {
-        width: 18%;
-        height: 100%;
-    
-    }
-    .title .title2 img:nth-child(2) {
-        position: absolute;
-        left: 17%
-    }
-    .title .title2 img:nth-child(3) {
-        position: absolute;
-        left: 32%
-    }
-    .title .title2 img:nth-child(4) {
-        position: absolute;
-        left: 47%
-    }
-    .title .title2 img:nth-child(5) {
-        position: absolute;
-        left: 64%
-    }
-    .spring {
-        width: 140px;
-        height: 140px;
-        bottom: 22%;
-    }
-    .blackStar {
-        right: 14%;
-        width: 25px;
-        height: 25px;
+        width: 120px;
     }
     .smile1 {
-        width: 80px;
-        height: 80px;
-        bottom: 40%;
+        width: 90px;
+        height: 90px;
+        background-image: url(img/smile1.png);
+        background-size: cover;
+        position: absolute;
+        right: 20px;
+        bottom: 300px;
+        animation: smile 5s linear infinite;
     }
     .smile2 {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
+        background-image: url(img/smile2.png);
+        background-size: cover;
+        position: absolute;
+        top: 100px;
+        right: 10%;
     }
-    .blue1 {
-        top: 50%;
+    .spring {
+        width: 170px;
+        height: 170px;
+        background-image: url(img/spring.png);
+        background-size: cover;
+        position: absolute;
+        bottom: 18%;
+        right: 12%;
+        padding: 10px;
+    }
+    .title figcaption p {
         font-size: 20px;
     }
-    .blue2 {
-        top: 10%;
-        font-size: 20px;
+    /* 네비 */
+    .nav_inner .gnb {
+        display: none;
     }
+    .hamburger {
+        display: flex;
+        right: 5%;
+    }
+    /* 프로젝트 */
+   .opacity1, .opacity2, .opacity3 {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) figcaption {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) .pageBtn {
+    opacity: 1;
+  }
     /* 엔딩섹션 */
     .thu img {
         width: 250px;
@@ -1380,43 +1362,30 @@ article:nth-child(3) {
 
 /* 데스크탑 구간 */
 @media(min-width:769px) and (max-width:999px) {
-    header .thisis {
-        top: 27%;
-        width: 25%;
-        height: 60px;
-    }
+    /* 헤더 설정 */
     header .title {
-        top: 32%;
-        width: 80%;
-        height: 40%;
+        width: 650px;
+        height: 330px;
+        position: absolute;
+        bottom: 35%;
+        left: 10px;
     }
-    .title figcaption {
-        bottom: 5%;
-        left: 5%;
-        border: 2px solid #323232;
+    header .thisis {
         width: 220px;
-        height: 60px;
+        height: 30px;
+        background-image: url(img/thisis.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 20px;
     }
-    .title figcaption p {
-        font-size: 18px;
-        text-align: center;
+    .title .title1 {
+        position: relative;
+        margin-top: 40px;
     }
-    
     .title .title1>img {
-        width: 18%;
-        height: 100%;
-    }
-    .title .title1 img:nth-child(2) {
-        position: absolute;
-        left: 16%
-    }
-    .title .title1 img:nth-child(3) {
-        position: absolute;
-        left: 32%
-    }
-    .title .title1 img:nth-child(4) {
-        position: absolute;
-        left: 46%
+        width: 120px;
     }
     .title .title2 {
         /* margin-left: 100px; */
@@ -1424,53 +1393,50 @@ article:nth-child(3) {
         position: relative;
     }
     .title .title2>img {
-        width: 18%;
-        height: 100%;
-    
-    }
-    .title .title2 img:nth-child(2) {
-        position: absolute;
-        left: 17%
-    }
-    .title .title2 img:nth-child(3) {
-        position: absolute;
-        left: 32%
-    }
-    .title .title2 img:nth-child(4) {
-        position: absolute;
-        left: 47%
-    }
-    .title .title2 img:nth-child(5) {
-        position: absolute;
-        left: 64%
-    }
-    .spring {
-        width: 160px;
-        height: 160px;
-    
-    }
-    .blackStar {
-        right: 14%;
-        width: 25px;
-        height: 25px;
+        width: 120px;
     }
     .smile1 {
         width: 90px;
         height: 90px;
-        bottom: 30%;
+        background-image: url(img/smile1.png);
+        background-size: cover;
+        position: absolute;
+        right: 20px;
+        bottom: 300px;
+        animation: smile 5s linear infinite;
     }
     .smile2 {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
+        background-image: url(img/smile2.png);
+        background-size: cover;
+        position: absolute;
+        top: 100px;
+        right: 10%;
     }
-    .blue1 {
-        top: 55%;
+    .spring {
+        width: 170px;
+        height: 170px;
+        background-image: url(img/spring.png);
+        background-size: cover;
+        position: absolute;
+        bottom: 18%;
+        right: 12%;
+        padding: 10px;
+    }
+    .title figcaption p {
         font-size: 20px;
     }
-    .blue2 {
-        top: 12%;
-        font-size: 20px;
-    }
+   /* 프로젝트 */
+   .opacity1, .opacity2, .opacity3 {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) figcaption {
+    opacity: 1;
+  }
+   .project section:nth-child(-n+3) .pageBtn {
+    opacity: 1;
+  }
     /* 엔딩섹션 */
     .thu img {
         width: 400px;
@@ -1491,38 +1457,87 @@ article:nth-child(3) {
     .cloud img:nth-child(2) {
         width: 347px;
     }
+    .nav_inner .gnb {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        right: 5%;
+    }
 }
 
 @media(min-width:1000px) and (max-width:1279px) {
+    /* 헤더 설정 */
     header .title {
-        height: 45%;
+        width: 850px;
+        height: 400px;
+        position: absolute;
+        bottom: 28%;
+        left: 10px;
     }
-    .spring {
-        width: 250px;
-        height: 250px;
-        left: 52%;
+    header .thisis {
+        width: 220px;
+        height: 30px;
+        background-image: url(img/thisis.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 20px;
+    }
+    .title .title1 {
+        position: relative;
+        margin-top: 20px;
+    }
+    .title .title1>img {
+        width: 160px;
+    }
+    .title .title2 {
+        /* margin-left: 100px; */
+        margin-top: -30px;
+        position: relative;
+    }
+    .title .title2>img {
+        width: 160px;
     }
     .smile1 {
-        width: 120px;
-        height: 120px;
-        bottom: 30%;
+        width: 90px;
+        height: 90px;
+        background-image: url(img/smile1.png);
+        background-size: cover;
+        position: absolute;
+        right: 20px;
+        bottom: 280px;
+        animation: smile 5s linear infinite;
     }
-    .blackStar {
-        right: 18%;
+    .smile2 {
+        width: 200px;
+        height: 200px;
+        background-image: url(img/smile2.png);
+        background-size: cover;
+        position: absolute;
+        top: 100px;
+        right: 10%;
     }
-    .blue1 {
-        top: 52%;
-        font-size: 25px;
+    .spring {
+        width: 190px;
+        height: 190px;
+        background-image: url(img/spring.png);
+        background-size: cover;
+        position: absolute;
+        bottom: 18%;
+        right: 12%;
+        padding: 10px;
     }
-    .blue2 {
-        top: 12%;
-        font-size: 25px;
+     /* 네비 */
+     .nav_inner {
+        width: 95%;
     }
 }
 /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
 @media(min-width:1280px) {
-    .nav_inner, .project {
+    .header_inner, .nav_inner, .project {
         width: 1240px;
         margin: 0 auto;
     }
