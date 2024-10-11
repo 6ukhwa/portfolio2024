@@ -48,7 +48,7 @@ header {
     position: relative;
     height: 100vh;
 }
-.header_inner>p {
+header>p {
     font-size: 25px;
     color: #0085FF;
     font-weight: 900;
@@ -1143,12 +1143,11 @@ article:nth-child(3) {
 @media(max-width:600px){
         /* 헤더 설정 */
         header .title {
-            width: 330px;
-            height: 260px;
+            width: 380px;
+            height: 240px;
             position: absolute;
-            bottom: 35%;
+            bottom: 45%;
             left: 10px;
-            background-color: red;
         }
         header .thisis {
             width: 180px;
@@ -1162,47 +1161,35 @@ article:nth-child(3) {
         }
         .title .title1 {
             position: relative;
-            margin-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         .title .title1>img {
-            width: 90px;
+            width: 80px;
         }
         .title .title2 {
-            /* margin-left: 100px; */
-            margin-top: -30px;
             position: relative;
         }
         .title .title2>img {
-            width: 90px;
+            width: 80px;
+        }
+        .blackStar {
+            display: none;
         }
         .smile1 {
-            width: 90px;
-            height: 90px;
-            background-image: url(img/smile1.png);
-            background-size: cover;
-            position: absolute;
-            right: 20px;
-            bottom: 300px;
-            animation: smile 5s linear infinite;
+            display: none;
         }
         .smile2 {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             background-image: url(img/smile2.png);
             background-size: cover;
             position: absolute;
-            top: 100px;
+            top: 10%;
             right: 10%;
         }
         .spring {
-            width: 170px;
-            height: 170px;
-            background-image: url(img/spring.png);
-            background-size: cover;
-            position: absolute;
-            bottom: 18%;
-            right: 12%;
-            padding: 10px;
+            display: none;
         }
         .title figcaption {
             width: 100%;
@@ -1210,6 +1197,9 @@ article:nth-child(3) {
         }
         .title figcaption p {
             font-size: 16px;
+        }
+        header button {
+            bottom: 20%;
         }
     /* 네비 */
     .nav_inner .gnb {
@@ -1219,6 +1209,119 @@ article:nth-child(3) {
         display: flex;
         right: 5%;
     }
+    .profile {
+        width: 90%;
+        height: 85%;
+        background-color: #FFE381;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-48%);
+        margin-top: 30px;
+        border-radius: 40px;
+    }
+    .profile .name {
+        width: 200px;
+        height: 200px;
+        background-image: url(img/profile.png);
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 77%;
+        margin-left: -100px;
+        transform: scale(0);
+        animation: name 1s 0.5s ease-out forwards;
+    }
+    .keywords {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        margin-left: -50px;
+        opacity: 1;
+        transition: all 0.8s;
+        transform: translateY(0px);
+    }
+    .keywords>div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #323232;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        margin-left: -25px;
+        transition: all 1s 0.5s;
+    }
+    .keywords>div p {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+    }
+    .keywords {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .keywords>div:nth-child(1) {
+        transform: rotate(-45deg) translateX(-210px);
+    }
+    .keywords>div:nth-child(2) {
+        transform: rotate(-30deg) translateX(-150px);
+    }
+    .keywords>div:nth-child(3) {
+        transform: rotate(-15deg) translateX(-80px);
+    }
+    .keywords>div:nth-child(4) {
+        transform: rotate(0deg) translateX(0);
+    }
+    .keywords>div:nth-child(5) {
+        transform: rotate(15deg) translateX(80px);
+    }
+    .keywords>div:nth-child(6) {
+        transform: rotate(30deg) translateX(150px);
+    }
+    .keywords>div:nth-child(7) {
+        transform: rotate(45deg) translateX(210px);
+    }
+    
+    /* 소개란################################# */
+    .profile figcaption {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+    }
+    .profile figcaption i {
+        color: #fff;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    .profile figcaption strong {
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+    .profile figcaption p {
+        font-size: 18px;
+    }
+    .profile figcaption a {
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    .profile aside h2 {
+        color: #0085FF;
+        font-size: 20px;
+    }
+    
     /* 프로젝트 */
    .opacity1, .opacity2, .opacity3 {
     opacity: 1;
@@ -1255,6 +1358,12 @@ article:nth-child(3) {
 /* 태블릿구간 */
 @media(min-width:601px) and (max-width:768px) {
     /* 헤더 설정 */
+        /* 헤더 설정 */
+        .header_inner {
+            height: 900px;
+            top: 50%;
+            transform: translateY(-60%);
+        }
     header .title {
         width: 650px;
         height: 330px;
@@ -1363,12 +1472,17 @@ article:nth-child(3) {
 /* 데스크탑 구간 */
 @media(min-width:769px) and (max-width:999px) {
     /* 헤더 설정 */
+    .header_inner {
+        height: 900px;
+        top: 50%;
+        transform: translateY(-60%);
+    }
     header .title {
-        width: 650px;
-        height: 330px;
+        width: 700px;
+        height: 350px;
         position: absolute;
-        bottom: 35%;
-        left: 10px;
+        bottom: 40%;
+        left: 20px;
     }
     header .thisis {
         width: 220px;
@@ -1385,7 +1499,7 @@ article:nth-child(3) {
         margin-top: 40px;
     }
     .title .title1>img {
-        width: 120px;
+        width: 140px;
     }
     .title .title2 {
         /* margin-left: 100px; */
@@ -1393,7 +1507,7 @@ article:nth-child(3) {
         position: relative;
     }
     .title .title2>img {
-        width: 120px;
+        width: 140px;
     }
     .smile1 {
         width: 90px;
@@ -1411,7 +1525,7 @@ article:nth-child(3) {
         background-image: url(img/smile2.png);
         background-size: cover;
         position: absolute;
-        top: 100px;
+        top: 10%;
         right: 10%;
     }
     .spring {
@@ -1490,7 +1604,7 @@ article:nth-child(3) {
         margin-top: 20px;
     }
     .title .title1>img {
-        width: 160px;
+        width: 150px;
     }
     .title .title2 {
         /* margin-left: 100px; */
@@ -1498,7 +1612,7 @@ article:nth-child(3) {
         position: relative;
     }
     .title .title2>img {
-        width: 160px;
+        width: 150px;
     }
     .smile1 {
         width: 90px;
