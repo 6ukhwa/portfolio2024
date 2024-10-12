@@ -229,7 +229,7 @@ header button {
     border-bottom-right-radius: 40px;
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 15%;
     margin-left: -100px;
     cursor: pointer;
     transition: all 0.2s;
@@ -644,7 +644,10 @@ main>article:nth-child(1) {
 /* 두번째 아티클######################## */
 
 article:nth-child(2) {
-    height: 100vh;
+    
+}
+article:nth-child(2) span {
+    display: none;
 }
 .project {
     display: flex;
@@ -1212,8 +1215,7 @@ article:nth-child(3) {
     }
     /* 프로필 */
     main>article:nth-child(1) {
-        margin-top: 70px;
-        height: 1200px;
+        height: 1000px !important;
     }
     .profile {
         width: 90%;
@@ -1221,9 +1223,9 @@ article:nth-child(3) {
         background-color: #FFE381;
         position: absolute;
         left: 50%;
-        top: 30px;
-        transform: translateX(-50%);
-        margin-top: 0px;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        margin-top: 35px;
         border-radius: 40px;
     }
     .profile .name {
@@ -1389,15 +1391,28 @@ article:nth-child(3) {
 
     /* 프로젝트 */
     article:nth-child(2) {
-        height: 1000px;
+        height: 900px !important;
+        position: relative;
+    }
+    article:nth-child(2) span {
+        display: block;
+        font-size: 30px;
+        font-weight: 800;
+        color: #0085FF;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 70px;
     }
     .project {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
         display: flex;
         height: 800px;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        padding-top: 50px;
         /* background-image: url(img/chekerboard.jpg); */
     }
     .project>section {
@@ -1462,13 +1477,14 @@ article:nth-child(3) {
     /* 엔딩섹션 */
     article:nth-child(3) {
         position: relative;
-        height: 600px;
+        height: 600px !important;
     }
     .ending {
         position: absolute;
         width: 100%;
-        height: 500px;
-        top: 10%;
+        height: 300px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .thu img {
         width: 250px;
@@ -1576,11 +1592,10 @@ article:nth-child(3) {
     /* 프로필 */
     main>article:nth-child(1) {
         margin-top: 70px;
-        height: 1000px;
     }
     .profile {
         width: 90%;
-        height: 900px;
+        height: 830px;
         background-color: #FFE381;
         position: absolute;
         left: 50%;
@@ -1751,24 +1766,37 @@ article:nth-child(3) {
 }
 /* 프로젝트 */
 article:nth-child(2) {
-    height: 1200px;
+    height: 950px !important;
+    position: relative;
+}
+article:nth-child(2) span {
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: #0085FF;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 110px;
 }
 .project {
     display: flex;
     height: 800px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
     /* background-image: url(img/chekerboard.jpg); */
 }
 .project>section {
-    width: 60%;
+    width: 50%;
     height: 600px;
     border-radius: 35px;
     overflow: hidden;
     border: 2px solid #323232;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .project section:nth-child(1) .pageBtn {
     top: 75%;
@@ -1824,13 +1852,14 @@ opacity: 1;
     /* 엔딩섹션 */
     article:nth-child(3) {
         position: relative;
-        height: 500px;
+        height: 600px !important;
     }
     .ending {
         position: absolute;
         width: 100%;
-        height: 500px;
-        top: 10%;
+        height: 300px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .thu img {
         width: 250px;
@@ -1926,7 +1955,209 @@ opacity: 1;
     .title figcaption p {
         font-size: 20px;
     }
+        /* 프로필 */
+
+        .profile {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            margin-top: 35px;
+        }
+        .profile .name {
+            width: 140px;
+            height: 140px;
+            background-image: url(img/profile.png);
+            background-size: cover;
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            margin-left: -70px;
+            margin-top: 0;
+            animation: name 1s 0.5s ease-out forwards;
+        }
+        .keywords {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -50px;
+            opacity: 1;
+            transition: all 0.8s;
+        }
+        .keywords>div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #323232;
+            margin-left: -25px;
+            transition: all 1s 0.5s;
+        }
+        .keywords>div p {
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+        }
+        .keywords>div:nth-child(1) {
+            transform: rotate(-45deg) translateX(-175px);
+        }
+        .keywords>div:nth-child(2) {
+            transform: rotate(-30deg) translateX(-125px);
+        }
+        .keywords>div:nth-child(3) {
+            transform: rotate(-15deg) translateX(-65px);
+        }
+        .keywords>div:nth-child(4) {
+            transform: rotate(0deg) translateX(0);
+        }
+        .keywords>div:nth-child(5) {
+            transform: rotate(15deg) translateX(65px);
+        }
+        .keywords>div:nth-child(6) {
+            transform: rotate(30deg) translateX(125px);
+        }
+        .keywords>div:nth-child(7) {
+            transform: rotate(45deg) translateX(175px);
+        }
+        /* 소개란################################# */
+        .profile figcaption {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            left: 50%;
+            top: 260px;
+            transform: translateX(-50%);
+        }
+        .profile figcaption i {
+            color: #fff;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .profile figcaption strong {
+            font-size: 22px;
+            letter-spacing: 10px;
+        }
+        .profile figcaption p {
+            font-size: 14px;
+            margin-bottom: -10px;
+        }
+        .profile figcaption a {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        .profile aside h2 {
+            color: #0085FF;
+            font-size: 20px;
+        }
+        /* 스킬목록##################### */
+    .skill {
+        position: absolute;
+        top: 380px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+    .skill h2 {
+        width: 100%;
+        text-align: center;
+    }
+    .program {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .program p {
+        margin-left: 0;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .program img {
+        width: 25px;
+    }
+    .program>div {
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        flex-direction: column;
+    }
+        .progressBar {
+            display: none;
+        }
+        /* 교육, 자격증###################### */
+    .proLeft {
+        position: absolute;
+        left: 50%;
+        top: 510px;
+        transform: translate(-50%);
+    }
+    .proLeft h2 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    .proLeft p {
+        margin-top: 15px;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .proLeft span {
+        margin-right: 0px;
+        height: 25px;
+        color: #777;
+    }
+    .proLeft .edu {
+        margin-bottom: 40px;
+        width: 300px;
+    }
    /* 프로젝트 */
+   article:nth-child(2) {
+    position: relative;
+   }
+   article:nth-child(2) span {
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: #0085FF;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+}
+   .project {
+       display: flex;
+       width: 100%;
+       height: 90%;
+       position: absolute;
+       bottom: 0;
+       justify-content: space-around;
+       flex-direction: column;
+       align-items: center;
+       /* background-image: url(img/chekerboard.jpg); */
+   }
+   .project>section {
+       width: 65%;
+       height: 30%;
+       border-radius: 35px;
+       overflow: hidden;
+       border: 2px solid #323232;
+       margin-top: 0;
+   }
    .opacity1, .opacity2, .opacity3 {
     opacity: 1;
   }
