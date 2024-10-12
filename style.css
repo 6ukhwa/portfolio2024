@@ -61,7 +61,7 @@ header .title {
     width: 950px;
     height: 480px;
     position: absolute;
-    bottom: 28%;
+    bottom: 35%;
     left: 10px;
 }
 header .thisis {
@@ -1209,6 +1209,7 @@ article:nth-child(3) {
         display: flex;
         right: 5%;
     }
+    /* 프로필 */
     .profile {
         width: 90%;
         height: 85%;
@@ -1221,14 +1222,13 @@ article:nth-child(3) {
         border-radius: 40px;
     }
     .profile .name {
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
         background-image: url(img/profile.png);
         background-size: cover;
         position: absolute;
-        left: 50%;
-        top: 77%;
-        margin-left: -100px;
+        left: 230px;
+        top: 35%;
         transform: scale(0);
         animation: name 1s 0.5s ease-out forwards;
     }
@@ -1237,7 +1237,7 @@ article:nth-child(3) {
         height: 100px;
         position: absolute;
         left: 50%;
-        top: 20%;
+        top: 32%;
         margin-left: -50px;
         opacity: 1;
         transition: all 0.8s;
@@ -1267,25 +1267,25 @@ article:nth-child(3) {
         transform: translateY(0px);
     }
     .keywords>div:nth-child(1) {
-        transform: rotate(-45deg) translateX(-210px);
+        transform: rotate(-45deg) translateX(-175px);
     }
     .keywords>div:nth-child(2) {
-        transform: rotate(-30deg) translateX(-150px);
+        transform: rotate(-30deg) translateX(-125px);
     }
     .keywords>div:nth-child(3) {
-        transform: rotate(-15deg) translateX(-80px);
+        transform: rotate(-15deg) translateX(-65px);
     }
     .keywords>div:nth-child(4) {
         transform: rotate(0deg) translateX(0);
     }
     .keywords>div:nth-child(5) {
-        transform: rotate(15deg) translateX(80px);
+        transform: rotate(15deg) translateX(65px);
     }
     .keywords>div:nth-child(6) {
-        transform: rotate(30deg) translateX(150px);
+        transform: rotate(30deg) translateX(125px);
     }
     .keywords>div:nth-child(7) {
-        transform: rotate(45deg) translateX(210px);
+        transform: rotate(45deg) translateX(175px);
     }
     
     /* 소개란################################# */
@@ -1571,6 +1571,7 @@ article:nth-child(3) {
     .cloud img:nth-child(2) {
         width: 347px;
     }
+    /* 네비 */
     .nav_inner .gnb {
         display: none;
     }
@@ -1586,7 +1587,6 @@ article:nth-child(3) {
         width: 850px;
         height: 400px;
         position: absolute;
-        bottom: 28%;
         left: 10px;
     }
     header .thisis {

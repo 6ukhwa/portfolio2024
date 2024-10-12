@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     // 브라우저의 높이값
     let winht = $(window).height()
 
@@ -42,24 +43,42 @@ $(document).ready(function(){
         $('.gnb li').removeClass('on');
         $(this).addClass('on')
     })
+    // 페이지 로드 시 한 번 화면 크기 체크
+    checkWindowSize();
 
-    //아티클에서 마우스휠했을때 화면이 움직인다.
-    $('article').mousewheel(function(event,delta){ //
-    event.preventDefault()
-    if(delta>0){
-    // 마우스를 올리면 이전 화면으로 움직이고 
-    let prev = $(this).prev().offset().top
-    $('html,body').stop().animate({'scrollTop':prev},800)
-    }
+    // 창 크기가 변경될 때마다 실행되는 함수
+    $(window).resize(function() {
+    checkWindowSize();
 
-    if(delta<0){
-    // 마우스를 내리면 다음 화면으로 움직인다.
-    let next = $(this).next().offset().top;
+    // 리사이징 될 때마다 브라우저 화면의 높이 찾기
+    let winht2 = $(window).height();
+    console.log("현재 창의 높이: " + winht2); // 높이 값 확인용
+    });
+
+    function checkWindowSize() {
+    var windowWidth = $(window).width();
     
-    $('html,body').stop().animate({'scrollTop':next},800)
+    if (windowWidth > 768) {
+        // 데스크탑일 때만 마우스휠 이벤트 활성화
+        $('article').on('mousewheel', function(event, delta) {
+        event.preventDefault();
+
+        if (delta > 0) {
+            // 마우스휠을 위로 돌리면 이전 화면으로
+            let prev = $(this).prev().offset().top;
+            $('html, body').stop().animate({ 'scrollTop': prev }, 800);
+        } else if (delta < 0) {
+            // 마우스휠을 아래로 돌리면 다음 화면으로
+            let next = $(this).next().offset().top;
+            $('html, body').stop().animate({ 'scrollTop': next }, 800);
+        }
+        });
+    } else {
+        // 모바일에서는 마우스휠 이벤트 제거
+        $('article').off('mousewheel');
     }
-    })
-    
+    }
+        
     
     // button을 클릭하면 헤더가 사라지고 메인이 나타남
     $('header').find('button').click(function(){
