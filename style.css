@@ -352,11 +352,11 @@ main {
 }
 main>article {
     width: 100%;
-    height: 100vh;
     background-color: #FFFBEC;
 }
 main>article:nth-child(1) {
     position: relative;
+    height: 866px;
 }
 .profile {
     width: 80%;
@@ -644,6 +644,7 @@ main>article:nth-child(1) {
 /* 두번째 아티클######################## */
 
 article:nth-child(2) {
+    height: 100vh;
 }
 .project {
     display: flex;
@@ -1210,26 +1211,30 @@ article:nth-child(3) {
         right: 5%;
     }
     /* 프로필 */
+    main>article:nth-child(1) {
+        margin-top: 70px;
+        height: 1000px;
+    }
     .profile {
         width: 90%;
         height: 900px;
         background-color: #FFE381;
         position: absolute;
         left: 50%;
-        top: 60px;
+        top: 30px;
         transform: translateX(-50%);
-        margin-top: 30px;
+        margin-top: 0px;
         border-radius: 40px;
     }
     .profile .name {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
         background-image: url(img/profile.png);
         background-size: cover;
         position: absolute;
-        top: 90px;
+        top: 110px;
         left: 50%;
-        margin-left: -65px;
+        margin-left: -70px;
         margin-top: 0;
         animation: name 1s 0.5s ease-out forwards;
     }
@@ -1238,7 +1243,7 @@ article:nth-child(3) {
         height: 100px;
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 20px;
         margin-left: -50px;
         opacity: 1;
         transition: all 0.8s;
@@ -1291,7 +1296,7 @@ article:nth-child(3) {
         justify-content: space-around;
         position: absolute;
         left: 50%;
-        top: 220px;
+        top: 260px;
         transform: translateX(-50%);
     }
     .profile figcaption i {
@@ -1315,7 +1320,73 @@ article:nth-child(3) {
         color: #0085FF;
         font-size: 20px;
     }
-    
+    /* 스킬목록##################### */
+.skill {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+.skill h2 {
+    width: 100%;
+    text-align: center;
+}
+.program {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.program p {
+    margin-left: 0;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.program img {
+    width: 25px;
+}
+.program>div {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+}
+    .progressBar {
+        display: none;
+    }
+    /* 교육, 자격증###################### */
+.proLeft {
+    position: absolute;
+    left: 50%;
+    top: 510px;
+    transform: translate(-50%);
+}
+.proLeft h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+.proLeft p {
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.proLeft span {
+    margin-right: 0px;
+    height: 25px;
+    color: #777;
+}
+.proLeft .edu {
+    margin-bottom: 40px;
+    width: 300px;
+}
+
     /* 프로젝트 */
    .opacity1, .opacity2, .opacity3 {
     opacity: 1;
@@ -1430,6 +1501,182 @@ article:nth-child(3) {
         display: flex;
         right: 5%;
     }
+    /* 프로필 */
+    main>article:nth-child(1) {
+        margin-top: 70px;
+        height: 1000px;
+    }
+    .profile {
+        width: 90%;
+        height: 900px;
+        background-color: #FFE381;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+        margin-top: 0px;
+        border-radius: 40px;
+    }
+    .profile .name {
+        width: 140px;
+        height: 140px;
+        background-image: url(img/profile.png);
+        background-size: cover;
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        margin-left: -70px;
+        margin-top: 0;
+        animation: name 1s 0.5s ease-out forwards;
+    }
+    .keywords {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        margin-left: -50px;
+        opacity: 1;
+        transition: all 0.8s;
+    }
+    .keywords>div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #323232;
+        margin-left: -25px;
+        transition: all 1s 0.5s;
+    }
+    .keywords>div p {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+    }
+    .keywords>div:nth-child(1) {
+        transform: rotate(-45deg) translateX(-175px);
+    }
+    .keywords>div:nth-child(2) {
+        transform: rotate(-30deg) translateX(-125px);
+    }
+    .keywords>div:nth-child(3) {
+        transform: rotate(-15deg) translateX(-65px);
+    }
+    .keywords>div:nth-child(4) {
+        transform: rotate(0deg) translateX(0);
+    }
+    .keywords>div:nth-child(5) {
+        transform: rotate(15deg) translateX(65px);
+    }
+    .keywords>div:nth-child(6) {
+        transform: rotate(30deg) translateX(125px);
+    }
+    .keywords>div:nth-child(7) {
+        transform: rotate(45deg) translateX(175px);
+    }
+    
+    /* 소개란################################# */
+    .profile figcaption {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        left: 50%;
+        top: 260px;
+        transform: translateX(-50%);
+    }
+    .profile figcaption i {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .profile figcaption strong {
+        font-size: 22px;
+        letter-spacing: 10px;
+    }
+    .profile figcaption p {
+        font-size: 14px;
+        margin-bottom: -10px;
+    }
+    .profile figcaption a {
+        font-size: 14px;
+        text-decoration: underline;
+    }
+    .profile aside h2 {
+        color: #0085FF;
+        font-size: 20px;
+    }
+    /* 스킬목록##################### */
+.skill {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.skill h2 {
+    width: 100%;
+    text-align: center;
+}
+.program {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.program p {
+    margin-left: 0;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.program img {
+    width: 25px;
+}
+.program>div {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+}
+    .progressBar {
+        display: none;
+    }
+    /* 교육, 자격증###################### */
+.proLeft {
+    position: absolute;
+    left: 50%;
+    top: 510px;
+    transform: translate(-50%);
+}
+.proLeft h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+.proLeft p {
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.proLeft span {
+    margin-right: 0px;
+    height: 25px;
+    color: #777;
+}
+.proLeft .edu {
+    margin-bottom: 40px;
+    width: 300px;
+}
     /* 프로젝트 */
    .opacity1, .opacity2, .opacity3 {
     opacity: 1;
