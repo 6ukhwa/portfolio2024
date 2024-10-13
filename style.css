@@ -370,22 +370,27 @@ main>article:nth-child(1) {
     border-radius: 40px;
 }
 .profile .name {
-    width: 400px;
-    height: 400px;
-    background-image: url(img/profile.png);
-    background-size: cover;
+    width: 24%;
+    height: 350px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -200px;
-    margin-top: -200px;
-    transform: scale(0);
+    transform: translateX(-50%) translateY(-50%) scale(0);
     animation: name 1s 0.5s ease-out forwards;
 }
+.profile .name img {
+    width: 100%;
+}
 @keyframes name {
-    0% {transform: scale(0);}
-    80% {transform: scale(1.1);}
-    100% {transform: scale(1);}
+    0% {
+        transform: translateX(-50%) translateY(-50%) scale(0);
+    }
+    80% {
+        transform: translateX(-50%) translateY(-50%) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
 }
 .keywords {
     width: 100px;
@@ -399,8 +404,8 @@ main>article:nth-child(1) {
     transform: translateY(0px);
 }
 .keywords>div {
-    width: 80px;
-    height: 80px;
+    width: 5vw; 
+    height: 5vw;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -414,7 +419,7 @@ main>article:nth-child(1) {
 }
 .keywords>div p {
     font-weight: 700;
-    font-size: 18px;
+    font-size: clamp(12px, 1.5vw, 18px);
     text-align: center;
 
 }
@@ -477,7 +482,7 @@ main>article:nth-child(1) {
     justify-content: space-around;
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: 5%;
     transform: translateX(-50%);
 }
 .profile figcaption i {
@@ -537,6 +542,8 @@ main>article:nth-child(1) {
     position: absolute;
     top: 10%;
     left: 5%;
+    height: 90%;
+    width: 20%;
 }
 .skill h2 {
     font-size: 30px;
@@ -544,8 +551,8 @@ main>article:nth-child(1) {
 .program {
     margin-left: 20px;
     margin-top: 20px;
-    width: 300px;
-    height: 600px;
+    width: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1234,9 +1241,7 @@ article:nth-child(3) {
         background-image: url(img/profile.png);
         background-size: cover;
         position: absolute;
-        top: 110px;
-        left: 50%;
-        margin-left: -70px;
+        top: 180px;
         margin-top: 0;
         animation: name 1s 0.5s ease-out forwards;
     }
@@ -1610,9 +1615,7 @@ article:nth-child(3) {
         background-image: url(img/profile.png);
         background-size: cover;
         position: absolute;
-        top: 110px;
-        left: 50%;
-        margin-left: -70px;
+        top: 180px;
         margin-top: 0;
         animation: name 1s 0.5s ease-out forwards;
     }
@@ -1972,9 +1975,7 @@ opacity: 1;
             background-image: url(img/profile.png);
             background-size: cover;
             position: absolute;
-            top: 110px;
-            left: 50%;
-            margin-left: -70px;
+            top: 180px;
             margin-top: 0;
             animation: name 1s 0.5s ease-out forwards;
         }
