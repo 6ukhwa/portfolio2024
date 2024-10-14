@@ -2288,6 +2288,43 @@ opacity: 1;
      .nav_inner {
         width: 95%;
     }
+    /* 프로필 */
+    .profile {
+        width: 90%;
+        height: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        margin-top: 35px;
+    }
+    .profile .name {
+        top: 60%;
+    }
+    .keywords {
+        left: 52%;
+        top: 40%;
+        transform: translateY(0px) translateX(-50%);
+    }
+    .keywords>div {
+        border: 1.8px solid #323232;
+    }
+    .keywords>div p {
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+    }
+    .proLeft p {
+        margin-top: 15px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+    }
+    .proLeft span {
+        margin-right: 0px;
+        height: 25px;
+        color: #777;
+    }
 }
 /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
