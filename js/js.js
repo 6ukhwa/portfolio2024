@@ -89,11 +89,10 @@ $(document).ready(function(){
     })
 
     // name에 마우스가 들어가면 키워드가 나옴
-    $('.name').mouseenter(function(){
-        $('.keywords div').addClass('on')
-        $('.keywords').addClass('on')
-    });
-
+    // $('.name').mouseenter(function(){
+    //     $('.keywords div').addClass('on')
+    //     $('.keywords').addClass('on')
+    // });
 
     // concept view버튼을 클릭하면 배경이 깔리고 팝업창과 X가 뜬다.
     $('.view1').click(function(){
