@@ -398,10 +398,9 @@ main>article:nth-child(1) {
     position: absolute;
     left: 50%;
     top: 25%;
-    margin-left: -50px;
     opacity: 0;
     transition: all 0.8s;
-    transform: translateY(0px);
+    transform: translateY(0px) translateX(-50%);
 }
 .keywords>div {
     width: 5vw; 
@@ -449,28 +448,28 @@ main>article:nth-child(1) {
 
 .keywords.on {
     opacity: 1;
-    transform: translateY(-150px);
+    transform: translateY(-150px) translateX(-50%);;
 }
 .keywords>div:nth-child(1).on {
-    transform: rotate(-45deg) translateX(-380px);
+    transform: rotate(-45deg) translateX(-380%);
 }
 .keywords>div:nth-child(2).on {
-    transform: rotate(-30deg) translateX(-280px);
+    transform: rotate(-30deg) translateX(-280%);
 }
 .keywords>div:nth-child(3).on {
-    transform: rotate(-15deg) translateX(-150px);
+    transform: rotate(-15deg) translateX(-150%);
 }
 .keywords>div:nth-child(4).on {
     transform: rotate(0deg) translateX(0);
 }
 .keywords>div:nth-child(5).on {
-    transform: rotate(15deg) translateX(150px);
+    transform: rotate(15deg) translateX(150%);
 }
 .keywords>div:nth-child(6).on {
-    transform: rotate(30deg) translateX(280px);
+    transform: rotate(30deg) translateX(280%);
 }
 .keywords>div:nth-child(7).on {
-    transform: rotate(45deg) translateX(380px);
+    transform: rotate(45deg) translateX(380%);
 }
 
 /* 소개란################################# */

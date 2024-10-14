@@ -21,6 +21,8 @@ $(document).ready(function(){
 
     let sc = $(this).scrollTop()
     let sht = $(window).height()
+    console.log(sc);
+    
     
     // 각 gnb li에 해당하는 위치에 도달하면 addclass
     for(var a=0; a<=3; a++){
@@ -92,6 +94,7 @@ $(document).ready(function(){
         $('.keywords').addClass('on')
     });
 
+
     // concept view버튼을 클릭하면 배경이 깔리고 팝업창과 X가 뜬다.
     $('.view1').click(function(){
         
@@ -101,7 +104,7 @@ $(document).ready(function(){
 
         $('.bnj').scrollTop(0);
     })
-
+                                                                                                                                                                                                                                                                                                                                                                                                           
     $('.view2').click(function(){
 
         $('.blackBg').addClass('on')
