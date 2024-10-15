@@ -60,7 +60,7 @@ $(document).ready(function(){
     function checkWindowSize() {
     var windowWidth = $(window).width();
     
-    if (windowWidth > 768) {
+    if (windowWidth > 999) {
         // 데스크탑일 때만 마우스휠 이벤트 활성화
         $('article').on('mousewheel', function(event, delta) {
         event.preventDefault();
