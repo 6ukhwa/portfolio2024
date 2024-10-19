@@ -168,6 +168,8 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     }
 
 
+    /* 전체 배경색 */
+    .wrap {background-color: #fafafa;}
 
 
     /* 첫번째 섹션############ */
@@ -282,26 +284,25 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
     /* 두번째 섹션############# */
     section:nth-child(2) {
-        height: 900px;
+        height: 950px;
         position: relative;
     }
     section:nth-child(2) .ncc {
         position: absolute;
-        z-index: -1;
-        top: 15%;
+        top: 20%;
     }
     section:nth-child(2) .second {
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 90%;
+        height: 100%;
     }
     .second h2 {
         color: #0072BC;
         font-size: 2.5em;
         letter-spacing: 10px;
         font-weight: 800;
-        margin-top: 80px;
+        margin-top: 150px;
     }
     .second span {
         font-size: 1.5em;
@@ -313,7 +314,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         width: 70%;
         justify-content: space-between;
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
     }
     .second ul li {
         background-color: grey;
@@ -393,6 +394,33 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         transition: all 0.5s;
     }
 
+
+
+    /* 세번째 섹션 */
+    section:nth-child(3) {
+        height: 500px;
+        position: relative;
+    }
+    section:nth-child(3) .twcc {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    section:nth-child(3) h2 {
+            color: #0072BC;
+            font-size: 2.5em;
+            font-weight: 800;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 50px;
+    }
+
+
+
+    
     /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
 @media(min-width:1280px) {
