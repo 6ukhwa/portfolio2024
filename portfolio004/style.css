@@ -721,33 +721,59 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     display: flex;
     justify-content: space-around;
   }
+  section:nth-child(5) .last .firstBox h4 {
+    margin: 10px 0 30px 0;
+  }
+  section:nth-child(5) .last .firstBox p {
+    width: 60%;
+    text-align: center;
+  }
   section:nth-child(5) .last .firstBox>div {
     width: 28%;
     height: 100%;
-    background-color: #fff;
-    backdrop-filter: blur(5px);
-    opacity: 0.2;
-    transition: all 0.3s ease-out;
-  }
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px) brightness(1);
+    mix-blend-mode: overlay;
+    transition: backdrop-filter 0.3s ease-out, filter 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #fff;
+    }
   section:nth-child(5) .last .secondBox {
     width: 90%;
     height: 47%;
     display: flex;
     justify-content: space-around;
   }
+  section:nth-child(5) .last .secondBox h4 {
+    margin: 10px 0 30px 0;
+  }
+  section:nth-child(5) .last .secondBox p {
+    width: 60%;
+    text-align: center;
+  }
   section:nth-child(5) .last .secondBox>div {
     width: 28%;
     height: 100%;
-    background-color: #fff;
-    backdrop-filter: blur(5px);
-    opacity: 0.2;
-    transition: all 0.3s ease-out;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px) brightness(1);
+    mix-blend-mode: overlay;
+    transition: backdrop-filter 0.3s ease-out, filter 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #fff;
   }
   section:nth-child(5) .last .firstBox>div:hover {
-    opacity: 1;
+    mix-blend-mode: normal;
+    background-color: rgba(255, 255, 255, 1);
   }
   section:nth-child(5) .last .secondBox>div:hover {
-    opacity: 1;
+    mix-blend-mode: normal;
+    background-color: rgba(255, 255, 255, 1);
   }
 
   /* 푸터############# */
