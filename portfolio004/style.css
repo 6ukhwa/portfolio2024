@@ -430,24 +430,27 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
     /* 세번째 섹션 */
     section:nth-child(3) {
-        height: 500px;
+        /* height: 500px; */
+
+    }
+    section:nth-child(3) .twcc_cover {
+        height: 450px;
         position: relative;
     }
     section:nth-child(3) .twcc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
         left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 25%;
+        transform: translateX(-50%);
     }
     section:nth-child(3) h2 {
             color: #0072BC;
             font-size: 2.5em;
             font-weight: 800;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            margin-top: 50px;
+            margin-top: -30px;
     }
 
     /* 아티클 설정########## */
@@ -609,8 +612,16 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   }
 
 
-
-
+  /* 네번째 섹션############## */
+  section:nth-child(4) {
+    background-image: url(img/news_bg.webp);
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+  }
+  section:nth-child(4) .board {
+    /* background-color: darkcyan; */
+  }
 
 @media(max-width:600px) {}
 @media(min-width:601px) and (max-width:768px) {}
