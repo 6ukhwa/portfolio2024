@@ -709,9 +709,55 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
 
 
-
-
-
+  /* 푸터############# */
+  footer {
+    height: 260px;
+    background-color: #313131;
+  }
+  footer .line {
+    height: 90px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+  }
+  footer .line .line_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .line .line_inner ul {
+    display: flex;
+  }
+  footer .line .line_inner ul li {
+    padding: 0 15px 0 15px;
+    border-right: 1px solid #ccc;
+  }
+  footer .line .line_inner ul li a {
+    color: #ccc;
+  }
+  footer .line .line_inner ul li:nth-child(3) {
+    border: none;
+  }
+  footer .line .line_inner .footer_util {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .line .line_inner .footer_util a {
+    padding: 15px;
+  }
+  .footer_bottom {
+    height: 50%;
+    display: flex;
+    align-items: end;
+  } 
+  .footer_bottom ul {}
+  .footer_bottom ul li {
+    color: #ccc;
+    font-weight: 100;
+    font-size: 0.9em;
+  }
+  
 
 
 
@@ -725,7 +771,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
 @media(min-width:1280px) {
-    .header_inner, .second, .board {
+    .header_inner, .second, .board, .footer_bottom, .line_inner {
         width: 1280px;
         margin: 0 auto;
     }
