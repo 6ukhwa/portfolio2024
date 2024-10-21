@@ -620,8 +620,96 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     height: 500px;
   }
   section:nth-child(4) .board {
-    /* background-color: darkcyan; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+  .board h4 {
+    font-size: 1.9em;
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .board h4 img {
+    width: 25px;
+    height: 25px;
+  }
+  .board time {
+    color: #aaa;
+    font-weight: 300;
+  }
+  .board .news {
+    width: 45%;
+    background-color: #fff;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .board .news ul {
+    width: 450px;
+    margin-top: 20px;
+  }
+  .board .news ul li {
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+  }
+  .board .news ul li>div {
+    width: 320px;
+    font-style: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  .board .notice {
+    width: 45%;
+    background-color: #fff;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .board .notice ul {
+    width: 450px;
+    margin-top: 20px;
+  }
+  .board .notice ul li {
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+  }
+  .board .notice ul li>div {
+    width: 320px;
+    font-style: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media(max-width:600px) {}
 @media(min-width:601px) and (max-width:768px) {}
@@ -630,7 +718,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
 @media(min-width:1280px) {
-    .header_inner, .second {
+    .header_inner, .second, .board {
         width: 1280px;
         margin: 0 auto;
     }
