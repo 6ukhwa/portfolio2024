@@ -55,13 +55,6 @@ $(document).ready(function() {
         }, 600); // 0.8초에 걸쳐 다시 아래로 이동
       });
   
-      // 마우스를 뗐을 때 애니메이션 실행
-      $('.second li').on('mouseleave', function() {
-        $(this).find('.cover').stop().animate({
-          top: '85%'
-        }, 600); // 0.8초에 걸쳐 다시 아래로 이동
-      });
-
 
 
 
