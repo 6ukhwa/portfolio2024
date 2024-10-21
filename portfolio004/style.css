@@ -699,6 +699,13 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   }
 
 
+  /* 디섯번째 섹션################ */
+  section:nth-child(5) {
+    height: 800px;
+    background-image: url(img/last_bg.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
 
 
 
