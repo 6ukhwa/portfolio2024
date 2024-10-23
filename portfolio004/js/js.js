@@ -24,7 +24,8 @@ $(document).ready(function() {
     $('.search').on('click', function() {
 
         $('header').addClass('expanded');
-        $('.search_pop').addClass('on')
+        $('.search_pop').addClass('on');
+        $('.submenu').css({'display':'none'});
       });
     
     // close 클릭시 remove
@@ -40,11 +41,19 @@ $(document).ready(function() {
       $('header').addClass('expanded');
       $('nav').addClass('on');
       $('.search_pop').removeClass('on')
+      $('.submenu').css({'display':'block'})
     },
     function() {
       $('header').removeClass('expanded');
     }
   );
+  // $('nav ul li').hover(function() {
+  //   $('header').addClass('expanded');
+  //   $(this).find('.submenu').slideDown(); // 서브메뉴 표시
+  // }, function() {
+  //   $(this).find('.submenu').slideUp(); // 서브메뉴 숨김
+  //   $('header').removeClass('expanded');
+  // });
 
     // 마우스를 올렸을 때 애니메이션 실행
     $('.second li').on('mouseenter', function() {
@@ -66,6 +75,8 @@ $(document).ready(function() {
         $('.ham_pop').toggleClass('on')
         $('.ham').toggleClass('on')
         $('.close_ham').toggleClass('on')
+        $('.search_pop').removeClass('on')
+        $('header').removeClass('expanded')
       })
 
       // top버튼 클릭시 화면 상단으로
