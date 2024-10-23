@@ -3,7 +3,7 @@ $(document).ready(function() {
   $(window).scroll(function(){
 
     var sc = $(this).scrollTop();
-    $('h1').text(sc);
+    // $('h1').text(sc);
   })
     
 

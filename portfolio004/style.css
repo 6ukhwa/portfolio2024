@@ -448,7 +448,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     /* 사이드바 설정############## */
     aside {
         width: 120px;
-        height: 400px;
+        height: 450px;
         background-color: #fff;
         position: absolute;
         right: 1%;
@@ -463,6 +463,45 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         color: #0072BC;
         text-align: center;
         margin-top: 15px;
+    }
+    aside ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 75%;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    aside ul li {
+        border-bottom: 1px dashed #ccc;
+    }
+    aside ul li:nth-child(3) {
+        border: none;
+    }
+    aside ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    aside ul li div {
+        width: 65px;
+        height: 65px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-bottom: 5px;
+    }
+    aside ul li p {
+        margin-bottom: 10px;
+    }
+    aside ul li div:nth-child(1) {
+        background-image: url(img/link_1.png);
+    }
+    aside ul li div:nth-child(2) {
+        background-image: url(img/link_2.png);
+    }
+    aside ul li div:nth-child(3) {
+        background-image: url(img/link_3.png);
     }
     aside .top {
         position: absolute;
