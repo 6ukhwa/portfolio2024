@@ -1,7 +1,12 @@
 $(document).ready(function() {
     
+  $(window).scroll(function(){
 
+    var sc = $(this).scrollTop();
+    $('h1').text(sc);
+  })
     
+  
     // 객체 나타나기 설정
     ScrollOut({
         onShown: function(el) {
@@ -45,19 +50,23 @@ $(document).ready(function() {
     $('.second li').on('mouseenter', function() {
         $(this).find('.cover').stop().animate({
           top: '50%'
-        }, 600); // 0.8초에 걸쳐 위로 이동
+        }, 600);
       });
   
       // 마우스를 뗐을 때 애니메이션 실행
       $('.second li').on('mouseleave', function() {
         $(this).find('.cover').stop().animate({
           top: '85%'
-        }, 600); // 0.8초에 걸쳐 다시 아래로 이동
+        }, 600);
       });
   
+      // 햄버거 버튼 클릭 시 팝업나타남
+      $('.bars').click(function(){
 
-
-
+        $('.ham_pop').toggleClass('on')
+        $('.ham').toggleClass('on')
+        $('.close_ham').toggleClass('on')
+      })
 
 
 
