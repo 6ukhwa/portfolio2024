@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('h1').text(sc);
   })
     
-  
+
     // 객체 나타나기 설정
     ScrollOut({
         onShown: function(el) {
@@ -68,8 +68,21 @@ $(document).ready(function() {
         $('.close_ham').toggleClass('on')
       })
 
+      // top버튼 클릭시 화면 상단으로
+      $('.top').click(function(){
+        $('html,body').animate({
+            scrollTop : 0}, 600);
+            return false;
+        })
 
+      // 사이드바 포지션 설정
+      $(window).scroll(function(){
 
+            if($(this).scrollTop() > 900) {
+                $('aside').css({'position':'fixed'});
+            }else {$('aside').css({'position':'absolute'});
+        }
+      });
 
 
 
