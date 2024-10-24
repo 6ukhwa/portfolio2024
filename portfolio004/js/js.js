@@ -77,6 +77,7 @@ $(document).ready(function() {
         $('.close_ham').toggleClass('on')
         $('.search_pop').removeClass('on')
         $('header').removeClass('expanded')
+        $('nav').toggleClass('none')
       })
 
       // top버튼 클릭시 화면 상단으로

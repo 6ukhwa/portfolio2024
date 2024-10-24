@@ -47,6 +47,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         background-color: #fff;
         transition: height 0.3s ease;
         overflow: hidden;
+        border-bottom: 1px solid #ccc;
     }
     .header_inner {
         height: 100px;
@@ -70,6 +71,9 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     }
     .header_inner nav.on {
         height: 400px;
+    }
+    .header_inner nav.none {
+        display: none;
     }
     .header_inner nav>ul {
         display: flex;
@@ -968,6 +972,59 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   .ham_pop.on {
     display: block;
   }
+  .ham_pop .ham_inner {
+    height: 90%;
+    width: 30%;
+    background-color: #0072BC;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .ham_pop .ham_inner >ul {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .ham_pop .ham_inner >ul li {
+    width: 50%;
+    text-align: right;
+    width: 50%;
+    transform: translateX(-30%);
+    opacity: 0;
+    animation: title 0.5s 0.2s ease-out forwards;
+  }
+  @keyframes title {
+    0% {transform: translateX(-30%); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+  }
+  .ham_pop .ham_inner >ul li a {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* 2뎁스 설정 */
+  .ham_pop .ham_inner >ul li ul.sub {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -30px;
+  }
+  .ham_pop .ham_inner >ul li ul.sub li {
+    
+  }
+  .ham_pop .ham_inner >ul li ul.sub li a {
+    color: #444;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
 
 
 @media(max-width:600px) {}
