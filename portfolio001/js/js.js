@@ -53,12 +53,12 @@ $(document).ready(function(){
                 if (currentIndex === 0) {
                     // hero_bg2가 위에 있는 상태에서 fadeIn, fadeOut
                     $('.hero_bg2').fadeIn(800, function() {
-                        $('.hero_bg1').fadeOut(0); // 빠르게 fadeOut 처리
+                        $('.hero_bg1').fadeOut(0);
                     });
                 } else {
                     // hero_bg1이 위에 있는 상태에서 fadeIn, fadeOut
                     $('.hero_bg1').fadeIn(0, function() {
-                        $('.hero_bg2').fadeOut(800); // 빠르게 fadeOut 처리
+                        $('.hero_bg2').fadeOut(800);
                     });
                 }
                 currentIndex = (currentIndex + 1) % 2;

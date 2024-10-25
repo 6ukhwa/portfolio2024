@@ -679,473 +679,102 @@ main>article:nth-child(1) {
 /* 두번째 아티클######################## */
 
 article:nth-child(2) {
+
 }
-article:nth-child(2) span {
-    display: none;
-}
-.project {
-    display: flex;
-    height: 100vh;
-    justify-content: space-around;
-    align-items: center;
-}
-.project>section {
-    width: 30%;
-    height: 65%;
-    border-radius: 35px;
+.projects {
+    width: 100%;
+    height: 100%;
+    position: relative;
     overflow: hidden;
-    border: 2px solid #323232;
+}
+.projects h2 {
+    width: 100%;
+    text-align: center;
+    color: #0085FF;
+    font-weight: 800;
+    font-size: 2rem;
+    position: absolute;
+    top: 15%;
+}
+.projects ul {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
     margin-top: 80px;
+    height: 65%;
 }
-.project section:nth-child(1) {
+.projects ul li {
+    width: 375px;
+    height: 100%;
+    margin-left: 30px;
+}
+.projects ul li:hover h3{
+    opacity: 1;
+}
+.projects ul li:hover span{
+    opacity: 1;
+}
+.projects ul li div {
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #313131;
     position: relative;
 }
-.project section:nth-child(1) .pageBtn {
-    position: absolute;
-    left: 0;
-    top: 70%;
-
+.projects ul li:nth-child(1) div {
+    background-image: url(img/project4.jpg);
 }
-.project section:nth-child(1) figcaption {
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    opacity: 0;
-}
-.project section:nth-child(1) figcaption h3 {
-    font-size: 25px;
-    color: #fff;
-}
-.project section:nth-child(1) figcaption p {
-    color: #fff;
-}
-.project section:nth-child(1) figure {
+.projects ul li:nth-child(2) div {
     background-image: url(img/project1.jpg);
-    background-size: cover;
-    background-position: center top;
-    margin-top: 37px;
-    width: 100%;
-    height: 200%;
-    border-radius: 10px;
 }
-.opacity1 {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: all 0.3s;
-}
-.project section:nth-child(1):hover .opacity1 {
-    opacity: 1;
-}
-.project section:nth-child(1):hover figure {
-    animation: background1 10s linear;
-}
-.project section:nth-child(1):hover figcaption {
-    opacity: 1;
-}
-.project section:nth-child(1):hover .pageBtn {
-    opacity: 1;
-}
-.project section:nth-child(1) .topBar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-bottom: 2px solid #323232;
-}
-.project section:nth-child(1) .topBar .dot {
-    position: absolute;
-    right: 10%;
-    top: 0;
-}
-
-
-/* 두번째 섹션 */
-.project section:nth-child(2) {
-    position: relative;
-}
-.project section:nth-child(2) .pageBtn {
-    position: absolute;
-    left: 0;
-    top: 70%;
-}
-.project section:nth-child(2) figcaption {
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    opacity: 0;
-}
-.project section:nth-child(2) figcaption h3 {
-    font-size: 25px;
-    color: #fff;
-}
-.project section:nth-child(2) figcaption p {
-    color: #fff;
-}
-.project section:nth-child(2) figure {
+.projects ul li:nth-child(3) div {
     background-image: url(img/project2.jpg);
-    background-size: cover;
-    background-position: center top;
-    width: 100%;
-    height: 200%;
-    margin-top: 37px;
-    border-radius: 5px;
 }
-.opacity2 {
+.projects ul li:nth-child(4) div {
+    background-image: url(img/project3.jpg);
+}
+.projects ul li div h3 {
+    font-size: 1.2rem;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 60px;
+    background-color: #FFE381;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.5s ease-in-out;
 }
-.project section:nth-child(2):hover .opacity2 {
-    opacity: 1;
+.projects ul li div h3 p {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 10px;
 }
-.project section:nth-child(2):hover figure {
-    animation: background1 10s linear;
-}
-.project section:nth-child(2):hover figcaption {
-    opacity: 1;
-}
-.project section:nth-child(2):hover .pageBtn {
-    opacity: 1;
-}
-.project section:nth-child(2) .topBar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-bottom: 2px solid #323232;
-}
-.project section:nth-child(2) .topBar .dot {
-    position: absolute;
-    right: 10%;
-    top: 0;
-}
-
-
-/* 세번째 섹션 */
-.project section:nth-child(3) {
-    position: relative;
-}
-.project section:nth-child(3) .pageBtn {
-    position: absolute;
-    left: 0%;
-    top: 70%;
-}
-.project section:nth-child(3) figcaption {
+.projects ul li div span {
+    color: #fff;
     width: 100%;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 40%;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    opacity: 0;
-}
-.project section:nth-child(3) figcaption h3 {
-    font-size: 25px;
-    color: #fff;
-}
-.project section:nth-child(3) figcaption p {
-    color: #fff;
-}
-.project section:nth-child(3) figure {
-    background-image: url(img/project3.jpg);
-    background-size: cover;
-    background-position: center top;
-    width: 100%;
-    height: 200%;
-    margin-top: 37px;
-    border-radius: 5px;
-}
-.opacity3 {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: all 0.3s;
-}
-.project section:nth-child(3):hover .opacity3 {
-    opacity: 1;
-}
-.project section:nth-child(3):hover figure {
-    animation: background1 10s linear;
-}
-.project section:nth-child(3):hover figcaption {
-    opacity: 1;
-}
-.project section:nth-child(3):hover .pageBtn {
-    opacity: 1;
-}
-.project section:nth-child(3) .topBar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-bottom: 2px solid #323232;
-}
-.project section:nth-child(3) .topBar .dot {
-    position: absolute;
-    right: 10%;
-    top: 0;
-}
-
-/* bg 애니메이션 */
-@keyframes background1 {
-    0% {transform: translateY(0%);}
-    100%{transform: translateY(-50%);}
-}
-.pageBtn {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    margin-left: 40px;
-    opacity: 0;
-    transition: all 0.8s;
-}
-.pageBtn>div {
-    border: 1px solid #fff;
-    width: 120px;
-    height: 40px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transition: all 0.3s 0.2s ease-out;
+    font-size: 1.2rem;
+}
+.projects ul li div span i {
     color: #fff;
-    transition: all 0.3s;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
 }
-.pageBtn div:hover {
-    background-color: #fff;
-    color: #323232;
-}
-.pageBtn div:hover a {
-    color: #323232;
-}
-.pageBtn a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-.topBar {
-    width: 100%;
-    height: 40px;
-    background-color: #FFE381;
-}
-.dot {
-    width: 40px;
-    height: 100%;
-}
-.dot img {
-    margin-top: 15px;
-}
-.project figcaption {
-    transition: all 0.8s;
-}
-
-
-
-
-/* 팝업창 설정 */
-.blackBg {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    display: none;
-}
-.blackBg.on {
-    display: block;
-}
-.close {
-    width: 70px;
-    height: 70px;
-    position: fixed;
-    right: 12%;
-    top: 50%;
-    background-color: #FFE381;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 11;
-    display: none;
-}
-.close i {
-    font-size: 35px;
-    color: #323232;
-    transition: all 0.3s;
-    margin-left: 22px;
-    margin-top: 18px;
-}
-.close:hover i {
-    transform: rotateZ(180deg);
-}
-.close.on {
-    display: block;
-}
-.bnj {
-    width: 60%;
-    height: 80%;
-    background-color: #ccc;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 11;
-    margin-top: 40px;
-    border-radius: 35px;
-    border: 2px solid #323232;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    display: none;
-}
-.bnj.on {
-    display: block;
-}
-.bnj .detail {
-    width: 100%;
-    height: 1250%;
-    background-image: url(img/concept1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-top: 40px;
-}
-.bnj .pop_topBar {
-    width: 100%;
-    height: 40px;
-    background-color: #FFE381;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    border: 2px solid #323232;
-    position: absolute;
-    left: -2px;top: -2px;
-}
-.bnj .pop_topBar img {
-    position: absolute;
-    right: 5%;
-    margin-top: 15px;
-}
-
-/* 동물 */
-.kap {
-    width: 60%;
-    height: 80%;
-    background-color: #ccc;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 11;
-    margin-top: 40px;
-    border-radius: 35px;
-    border: 2px solid #323232;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    display: none;
-}
-.kap.on {
-    display: block;
-}
-.kap .detail {
-    width: 100%;
-    height: 1020%;
-    background-image: url(img/concept2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-top: 40px;
-}
-.kap .pop_topBar {
-    width: 100%;
-    height: 40px;
-    background-color: #FFE381;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    border: 2px solid #323232;
-    position: fixed;
-    left: -2px;top: -2px;
-}
-.kap .pop_topBar img {
-    position: absolute;
-    right: 5%;
-    margin-top: 15px;
-}
-
-
-/* 이도현 */
-.ldh {
-    width: 60%;
-    height: 80%;
-    background-color: #ccc;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 11;
-    margin-top: 40px;
-    border-radius: 35px;
-    border: 2px solid #323232;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    display: none;
-}
-.ldh.on {
-    display: block;
-}
-.ldh .detail {
-    width: 100%;
-    height: 1290%;
-    background-image: url(img/concept3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-top: 40px;
-}
-.ldh .pop_topBar {
-    width: 100%;
-    height: 40px;
-    background-color: #FFE381;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    border: 2px solid #323232;
-    position: fixed;
-    left: -2px;top: -2px;
-}
-.ldh .pop_topBar img {
-    position: absolute;
-    right: 5%;
-    margin-top: 15px;
-}
-
 
 /* 세번째 아티클 엔딩############################ */
 article:nth-child(3) {
@@ -2157,57 +1786,8 @@ opacity: 1;
     height: 1200px !important;
     position: relative;
    }
-   article:nth-child(2) span {
-    display: block;
-    font-size: 35px;
-    font-weight: 800;
-    color: #0085FF;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 120px;
-}
-   .project {
-       display: flex;
-       width: 100%;
-       height: 83%;
-       justify-content: space-around;
-       flex-direction: column;
-       align-items: center;
-       position: absolute;
-       bottom: 0;
-       /* background-image: url(img/chekerboard.jpg); */
-   }
-   .project>section {
-       width: 65%;
-       height: 30%;
-       border-radius: 35px;
-       overflow: hidden;
-       border: 2px solid #323232;
-       margin-top: 0;
-   }
-   .opacity1, .opacity2, .opacity3 {
-    opacity: 1;
-  }
-   .project section:nth-child(-n+3) figcaption {
-    opacity: 1;
-  }
-   .project section:nth-child(-n+3) .pageBtn {
-    opacity: 1;
-  }
-  .pageBtn {
-    margin-left: 0px;
-    width: 100%;
-  }
-  .pageBtn .view1 {
-    display: none;
-}
-.pageBtn .view2 {
-    display: none;
-}
-.pageBtn .view3 {
-    display: none;
-}
+
+
     /* 엔딩섹션 */
 
     .thu img {
@@ -2232,10 +1812,6 @@ opacity: 1;
     /* 네비 */
     .nav_inner .gnb {
         display: none;
-    }
-    .hamburger {
-        display: flex;
-        right: 5%;
     }
 }
 
@@ -2356,7 +1932,7 @@ opacity: 1;
 /* 와이드데스크탑 */
 /* 1280px 이상일때 설정 */
 @media(min-width:1280px) {
-    .header_inner, .nav_inner, .project {
+    .header_inner, .nav_inner, .projects {
         width: 1240px;
         margin: 0 auto;
     }
