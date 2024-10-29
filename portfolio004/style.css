@@ -412,7 +412,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         top: 51%;
       }
       .txt1 span {
-        font-size: 2.2em;
+        font-size: 2.0em;
       }
       .txt2 span {
         font-size: 1.2em;
@@ -654,7 +654,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         background-color: #fff;
         position: absolute;
         right: 1%;
-        top: 50%;
+        top: 65%;
         z-index: 100;
         transform: translateY(-50%);
         border: #0072BC 2px solid;
@@ -922,6 +922,9 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     background-position: center center;
     background-size: cover;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   section:nth-child(4) .board {
     height: 100%;
@@ -967,7 +970,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     line-height: 40px;
   }
   .board .news ul li a>div {
-    width: 320px;
+    width: 60%;
     font-style: normal;
     overflow: hidden;
     white-space: nowrap;
@@ -998,12 +1001,145 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     line-height: 40px;
   }
   .board .notice ul li a>div {
-    width: 320px;
+    width: 60%;
     font-style: normal;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     word-break: break-all;
+  }
+  
+  /* 보도자료 반응형 */
+  @media(max-width:600px) {
+    section:nth-child(4) {
+      height: 550px;
+    }
+    section:nth-child(4) .board {
+      flex-direction: column;
+      width: 100%;
+      height: 90%;
+    }
+    section:nth-child(4) .board>div {
+      height: 220px;
+      width: 90%;
+    }
+    section:nth-child(4) .board>div>h4 {
+      font-size: 1.5em;
+      width: 90%;
+    }
+    .board h4 img {
+      width: 20px;
+      height: 20px;
+    }
+    .board .news ul {
+      width: 80%;
+      margin-top: 10px;
+    }
+    .board .news ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+    .board .notice ul {
+      width: 80%;
+      margin-top: 10px;
+    }
+    .board .notice ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+  }
+  @media(min-width:601px) and (max-width:768px) {
+    section:nth-child(4) {
+      height: 550px;
+    }
+    section:nth-child(4) .board {
+      flex-direction: column;
+      width: 100%;
+      height: 90%;
+    }
+    section:nth-child(4) .board>div {
+      height: 220px;
+      width: 500px;
+    }
+    section:nth-child(4) .board>div>h4 {
+      font-size: 1.5em;
+      width: 90%;
+    }
+    .board h4 img {
+      width: 20px;
+      height: 20px;
+    }
+    .board .news ul {
+      width: 400px;
+      margin-top: 10px;
+    }
+    .board .news ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+    .board .notice ul {
+      width: 400px;
+      margin-top: 10px;
+    }
+    .board .notice ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+  }
+  @media(min-width:769px) and (max-width:999px) {
+    section:nth-child(4) {
+      height: 550px;
+    }
+    section:nth-child(4) .board {
+      flex-direction: column;
+      width: 100%;
+      height: 90%;
+    }
+    section:nth-child(4) .board>div {
+      height: 220px;
+      width: 500px;
+    }
+    section:nth-child(4) .board>div>h4 {
+      font-size: 1.5em;
+      width: 90%;
+    }
+    .board h4 img {
+      width: 20px;
+      height: 20px;
+    }
+    .board .news ul {
+      width: 400px;
+      margin-top: 10px;
+    }
+    .board .news ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+    .board .notice ul {
+      width: 400px;
+      margin-top: 10px;
+    }
+    .board .notice ul li a {
+      font-size: 1em;
+      line-height: 35px;
+    }
+  }
+  @media(min-width:1000px) and (max-width:1279px) {
+    section:nth-child(4) .board {
+      width: 90%;
+    }
+    .board .news ul {
+      width: 350px;
+    }
+    .board .news ul li a {
+      font-size: 1.1em;
+    }
+    .board .notice ul {
+      width: 350px;
+    }
+    .board .notice ul li a {
+      font-size: 1.1em;
+    }
   }
 
 
@@ -1091,6 +1227,12 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     mix-blend-mode: normal;
     background-color: rgba(255, 255, 255, 1);
   }
+
+  /* 마지막센션 반응형 */
+  @media(max-width:600px) {}
+  @media(min-width:601px) and (max-width:768px) {}
+  @media(min-width:769px) and (max-width:999px) {}
+  @media(min-width:1000px) and (max-width:1279px) {}
 
   /* 푸터############# */
   footer {
