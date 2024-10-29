@@ -503,13 +503,16 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     section:nth-child(2) .ncc {
         position: absolute;
         top: 20%;
-  
     }
     section:nth-child(2) .second {
         display: flex;
         align-items: center;
         flex-direction: column;
         height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
     }
     .second h2 {
         color: #0072BC;
@@ -532,11 +535,11 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     }
     .second ul li {
         background-color: grey;
-        width: 300px;
+        width: 22%;
         height: 420px;
         overflow: hidden;
         position: relative;
-
+        background-position: center top;
     }
 
     .second ul li::before {
@@ -609,10 +612,38 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     }
 
     /* 윤리경영 반응형 */
-    @media(max-width:600px) {}
-    @media(min-width:601px) and (max-width:768px) {}
-    @media(min-width:769px) and (max-width:999px) {}
-    @media(min-width:1000px) and (max-width:1279px) {}
+    @media(max-width:600px) {
+      .ncc {
+        display: none;
+      }
+      aside {
+        display: none;
+      }
+    }
+    @media(min-width:601px) and (max-width:768px) {
+      .ncc {
+        display: none;
+      }
+      aside {
+        display: none;
+      }
+    }
+    @media(min-width:769px) and (max-width:999px) {
+      .ncc {
+        display: none;
+      }
+      aside {
+        display: none;
+      }
+    }
+    @media(min-width:1000px) and (max-width:1279px) {
+      section:nth-child(2) {
+        height: 800px;
+      }
+      .second ul li {
+        height: 300px;
+      }
+    }
 
 
 
@@ -697,7 +728,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
     }
     section:nth-child(3) .twcc_cover {
-        height: 450px;
+        height: 400px;
         position: relative;
     }
     section:nth-child(3) .twcc {
