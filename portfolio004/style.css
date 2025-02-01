@@ -548,6 +548,10 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     section:nth-child(2) .ncc {
         position: absolute;
         top: 20%;
+        width: 100%;
+    }
+    section:nth-child(2) .ncc img {
+      width: 45%;
     }
     section:nth-child(2) .second {
         display: flex;
@@ -591,7 +595,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     .second ul li::before {
         content: '';
         position: absolute;
-        bottom: -0;
+        bottom: 0;
         left: 0;
         width: 0;
         height: 0;
@@ -611,6 +615,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         position: absolute;
         left: 25px;
         top: 85%;
+        width: 85%;
         z-index: 1;
     }
     .second ul li p {
@@ -659,43 +664,231 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
     /* 윤리경영 반응형 */
     @media(max-width:600px) {
-      .ncc {
-        display: none;
+      section:nth-child(2) {
+        height: 1140px;
       }
+      section:nth-child(2) .ncc {
+        position: absolute;
+        top: 10%;
+    }
+    section:nth-child(2) .ncc img {
+      width: 50%;
+    }
+    .second h2 {
+      color: #0072BC;
+      font-size: 2em;
+      letter-spacing: 10px;
+      font-weight: 800;
+      margin-top: 150px;
+  }
       .second span {
-        font-size: 1.2em;
+        font-size: 1em;
         width: 90%;
-      }
+    }
+      .second ul {
+        bottom: 0%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+      .second ul li {
+        height: 180px;
+        width: 70%;
+        margin-bottom: 30px;
+        background-position: center center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .second ul li::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0) translateY(0);
+      background-color: rgba(0, 81, 134, 0.3); /* 덮을 색상과 투명도 */
+      border-radius: 0;
+      transition: width 0.5s ease, height 0.5s ease; /* 크기 변화 애니메이션 */
+      z-index: 1; /* 원이 백그라운드 이미지 위에 위치 */
+    }
+    .second ul li:nth-child(2) {
+      margin-top: 0;
+  }
+    .second ul li:nth-child(4) {
+      margin-top: 0;
+  }
+  .second ul li .cover {
+    position: absolute;
+    left: 10px;
+    top: 50% !important;
+    width: 90%;
+    z-index: 1;
+}
+    .second ul li p {
+      display: none;
+  }
+    .second ul li figcaption {
+      font-size: 1.3em;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+  }
       aside {
         display: none;
       }
     }
     @media(min-width:601px) and (max-width:768px) {
-      .ncc {
-        display: none;
+      section:nth-child(2) {
+        height: 600px;
       }
+      section:nth-child(2) .ncc {
+        position: absolute;
+        top: 20%;
+    }
+      .second span {
+        font-size: 1.2em;
+    }
+      .second ul {
+        bottom: 0%;
+        width: 100%;
+    }
+      .second ul li {
+        height: 260px;
+        width: 24%;
+    }
+    .second ul li::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0) translateY(0);
+      background-color: rgba(0, 81, 134, 0.3); /* 덮을 색상과 투명도 */
+      border-radius: 0;
+      transition: width 0.5s ease, height 0.5s ease; /* 크기 변화 애니메이션 */
+      z-index: 1; /* 원이 백그라운드 이미지 위에 위치 */
+    }
+    .second ul li:nth-child(2) {
+      margin-top: 0;
+  }
+    .second ul li:nth-child(4) {
+      margin-top: 0;
+  }
+  .second ul li .cover {
+    position: absolute;
+    left: 10px;
+    top: 50% !important;
+    width: 90%;
+    z-index: 1;
+}
+    .second ul li p {
+      display: none;
+  }
+    .second ul li figcaption {
+      font-size: 1.3em;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+  }
       aside {
         display: none;
       }
-      .second span {
-        width: 90%;
-      }
     }
     @media(min-width:769px) and (max-width:999px) {
-      .ncc {
-        display: none;
+      section:nth-child(2) {
+        height: 700px;
       }
+      section:nth-child(2) .ncc {
+        position: absolute;
+        top: 20%;
+    }
+      .second span {
+        font-size: 1.2em;
+    }
+      .second ul {
+        bottom: -5%;
+        width: 90%;
+    }
+      .second ul li {
+        height: 300px;
+    }
+    .second ul li::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0) translateY(0);
+      background-color: rgba(0, 81, 134, 0.6); /* 덮을 색상과 투명도 */
+      border-radius: 0;
+      transition: width 0.5s ease, height 0.5s ease; /* 크기 변화 애니메이션 */
+      z-index: 1; /* 원이 백그라운드 이미지 위에 위치 */
+    }
+    .second ul li:nth-child(2) {
+      margin-top: 70px;
+  }
+    .second ul li:nth-child(4) {
+      margin-top: 70px;
+  }
+  .second ul li .cover {
+    position: absolute;
+    left: 20px;
+    top: 50% !important;
+    width: 85%;
+    z-index: 1;
+}
+    .second ul li p {
+      margin-top: 15px;
+      line-height: 20px;
+      font-size: 0.7em;
+      opacity: 1;
+  }
+    .second ul li figcaption {
+      font-size: 1em;
+      color: #ff8000;
+  }
       aside {
         display: none;
       }
     }
     @media(min-width:1000px) and (max-width:1279px) {
       section:nth-child(2) {
-        height: 800px;
+        height: 700px;
       }
+      section:nth-child(2) .ncc {
+        position: absolute;
+        top: 20%;
+    }
+      .second span {
+        font-size: 1.2em;
+    }
+      .second ul {
+        bottom: -5%;
+    }
       .second ul li {
         height: 300px;
-      }
+    }
+    .second ul li:nth-child(2) {
+      margin-top: 70px;
+  }
+    .second ul li:nth-child(4) {
+      margin-top: 70px;
+  }
+    .second ul li .cover {
+      left: 20px;
+  }
+    .second ul li p {
+      margin-top: 15px;
+      line-height: 20px;
+      font-size: 0.7em;
+  }
+    .second ul li figcaption {
+      font-size: 1em;
+  }
       aside {
         display: none;
       }
@@ -1523,14 +1716,19 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     margin-top: -30px;
     position: absolute;
     right: -120%;
+    /* background-color: red; */
   }
   .ham_pop .ham_inner >ul li ul.sub li {
     padding: 10px;
+    /* background-color: blue; */
+    text-align: left;
+    width: 120px;
   }
   .ham_pop .ham_inner >ul li ul.sub li a {
     color: #444;
     font-size: 1.1rem;
     font-weight: 300;
+    /* background-color: orange; */
   }
   .ham_pop .ham_inner >ul li ul.sub li:hover a {
     font-weight: 500;
