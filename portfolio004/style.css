@@ -1083,11 +1083,6 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         margin-top: -30px;
         margin-bottom: 35px;
     }
-    .tBox_inner h4 {
-        font-size: 3em;
-        margin-top: -30px;
-        margin-bottom: 35px;
-    }
     .tBox_inner ul {
         height: 180px;
         display: flex;
@@ -1113,6 +1108,14 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     .four .tBox_inner ul li {
         color: #fff;
     }
+    /* 기본 데스크탑 레이아웃: 가로 배치 */
+.one, .three {
+  flex-direction: row;  /* 사진 | 글 */
+}
+
+.two, .four {
+  flex-direction: row-reverse;  /* 글 | 사진 */
+}
 
     /* 더보기 버튼설정 */
     .circle-btn {
@@ -1156,9 +1159,239 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   }
 
   /* 박스섹션 반응형 */
-  @media(max-width:600px) {}
-  @media(min-width:601px) and (max-width:768px) {}
+  @media(max-width:600px) {
+    section:nth-child(3) .twcc_cover {
+      height: 250px;
+  }
+    section:nth-child(3) .twcc {
+      width: 90%;
+  }
+  section:nth-child(3) h2 {
+    font-size: 1.4em;
+    margin-top: -15px;
+  }
+    
+    .explain {
+      height: 450px;
+      flex-direction: column;
+  }
+  .one .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .one .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .two .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .two .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .three .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .three .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .four .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .four .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+    .tBox_inner {
+      height: 85%;
+      width: 80%;
+      margin-top: 5%;
+  }
+  .tBox_inner p {
+      font-size: 0.8em;
+  }
+  .tBox_inner h4 {
+      font-size: 1.2em;
+      margin-bottom: -10px;
+  }
+  .tBox_inner ul {
+      height: 80px;
+      margin-bottom: 10px;
+  }
+  .tBox_inner ul li {
+      font-size: 0.9em;
+  }
+  .two .txt_box, .four .txt_box {
+    order: 2;  /* 글을 두 번째로 이동 */
+}
+
+.two .img_box, .four .img_box {
+    order: 1;  /* 사진을 첫 번째로 이동 */
+}
+.two .tBox_inner ul li {
+  color: #444444;
+}
+.two .tBox_inner h4 {
+  color: #1c1c1c;
+}
+.four .tBox_inner h4 {
+  color: #1c1c1c;
+}
+.four .tBox_inner ul li {
+  color: #444444;
+}
+  /* 더보기 버튼설정 */
+  .circle-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 35px;
+    font-size: 10px;
+    position: absolute;
+    right: 7%;
+    margin-top: 150px;
+}
+.circle-btn i {
+    position: absolute;
+    right: -2px;
+}
+.circle-btn:hover {
+    width: 25px;
+}
+.circle-btn .btn-text {
+  opacity: 0;
+}
+  }
+  @media(min-width:601px) and (max-width:768px) {
+  section:nth-child(3) .twcc {
+      width: 95%;
+  }
+  section:nth-child(3) h2 {
+    font-size: 1.8em;
+    margin-top: -15px;
+  }
+    
+    .explain {
+      height: 600px;
+      flex-direction: column;
+  }
+  .one .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .one .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .two .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .two .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .three .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .three .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+  .four .img_box {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+  }
+  .four .txt_box {
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+  }
+    .tBox_inner {
+      height: 85%;
+      width: 80%;
+      margin-top: 5%;
+      /* background-color: green; */
+  }
+  .tBox_inner p {
+      font-size: 1em;
+  }
+  .tBox_inner h4 {
+      font-size: 1.6em;
+      margin-bottom: 0px;
+  }
+  .tBox_inner ul {
+      height: 100px;
+  }
+  .tBox_inner ul li {
+      font-size: 1em;
+  }
+  .two .txt_box, .four .txt_box {
+    order: 2;  /* 글을 두 번째로 이동 */
+}
+
+.two .img_box, .four .img_box {
+    order: 1;  /* 사진을 첫 번째로 이동 */
+}
+.two .tBox_inner ul li {
+  color: #444444;
+}
+.two .tBox_inner h4 {
+  color: #1c1c1c;
+}
+.four .tBox_inner h4 {
+  color: #1c1c1c;
+}
+.four .tBox_inner ul li {
+  color: #444444;
+}
+  /* 더보기 버튼설정 */
+  .circle-btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 35px;
+    font-size: 12px;
+    position: absolute;
+    right: 7%;
+    margin-top: 150px;
+}
+.circle-btn i {
+    position: absolute;
+    right: 0px;
+}
+.circle-btn:hover {
+    width: 100px;
+}
+.circle-btn .btn-text {
+  opacity: 1;
+}
+  }
   @media(min-width:769px) and (max-width:999px) {
+  section:nth-child(3) h2 {
+    font-size: 2em;
+    margin-top: -20px;
+  }
+
     .explain {
       height: 470px;
   }
@@ -1168,7 +1401,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     }
     .tBox_inner {
       height: 400px;
-      width: 100%;
+      width: 80%;
       margin-top: 11%;
       /* background-color: green; */
   }
@@ -1187,9 +1420,20 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   }
   /* 더보기 버튼설정 */
   .circle-btn {
-    width: 35px;
+    width: 100px;
     height: 35px;
+    border-radius: 35px;
     font-size: 12px;
+}
+.circle-btn i {
+    position: absolute;
+    right: 0px;
+}
+.circle-btn:hover {
+    width: 100px;
+}
+.circle-btn .btn-text {
+  opacity: 1;
 }
   }
   @media(min-width:1000px) and (max-width:1279px) {
@@ -1690,6 +1934,15 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
     .line_inner ul li a {
       font-size: 0.7em;
     }
+    .footer_bottom ul li {
+      font-size: 0.7em;
+    }
+    footer .line .line_inner .footer_util a {
+      padding: 5px;
+    }
+    .footer_util a img {
+      width: 25px;
+    }
   }
   @media(min-width:601px) and (max-width:768px) {
     .line_inner {
@@ -1772,17 +2025,16 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   /* 2뎁스 설정 */
   .ham_pop .ham_inner >ul li ul.sub {
     display: flex;
-    width: 100%;
     margin-top: -30px;
     position: absolute;
-    right: -120%;
+    left: 120%;
     /* background-color: red; */
   }
   .ham_pop .ham_inner >ul li ul.sub li {
-    padding: 10px;
+    /* padding: 10px; */
     /* background-color: blue; */
-    text-align: left;
-    width: 120px;
+    text-align: center;
+    width: 130px;
   }
   .ham_pop .ham_inner >ul li ul.sub li a {
     color: #444;
