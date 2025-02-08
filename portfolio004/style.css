@@ -1224,7 +1224,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
       font-size: 0.8em;
   }
   .tBox_inner h4 {
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-bottom: -10px;
   }
   .tBox_inner ul {
@@ -1232,7 +1232,7 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
       margin-bottom: 10px;
   }
   .tBox_inner ul li {
-      font-size: 0.9em;
+      font-size: 1em;
   }
   .two .txt_box, .four .txt_box {
     order: 2;  /* 글을 두 번째로 이동 */
@@ -1255,20 +1255,20 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 }
   /* 더보기 버튼설정 */
   .circle-btn {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 35px;
-    font-size: 10px;
+    font-size: 12px;
     position: absolute;
     right: 7%;
     margin-top: 150px;
 }
 .circle-btn i {
     position: absolute;
-    right: -2px;
+    right: 0px;
 }
 .circle-btn:hover {
-    width: 25px;
+    width: 35px;
 }
 .circle-btn .btn-text {
   opacity: 0;
