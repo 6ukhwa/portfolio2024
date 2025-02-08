@@ -1083,6 +1083,11 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         margin-top: -30px;
         margin-bottom: 35px;
     }
+    .tBox_inner h4 {
+        font-size: 3em;
+        margin-top: -30px;
+        margin-bottom: 35px;
+    }
     .tBox_inner ul {
         height: 180px;
         display: flex;
@@ -1095,15 +1100,6 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         font-size: 1.8em;
         font-weight: 500;
         color: #444444;
-    }
-
-    .four .tBox_inner ul {
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 15px;
-        margin-bottom: 30px;
     }
     .two .tBox_inner ul li {
         color: #fff;
@@ -1162,8 +1158,72 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
   /* 박스섹션 반응형 */
   @media(max-width:600px) {}
   @media(min-width:601px) and (max-width:768px) {}
-  @media(min-width:769px) and (max-width:999px) {}
-  @media(min-width:1000px) and (max-width:1279px) {}
+  @media(min-width:769px) and (max-width:999px) {
+    .explain {
+      height: 470px;
+  }
+    .one .txt_box {
+        width: 50%;
+        height: 100%;
+    }
+    .tBox_inner {
+      height: 400px;
+      width: 100%;
+      margin-top: 11%;
+      /* background-color: green; */
+  }
+  .tBox_inner p {
+      font-size: 1em;
+  }
+  .tBox_inner h4 {
+      font-size: 2em;
+      margin-bottom: 15px;
+  }
+  .tBox_inner ul {
+      height: 120px;
+  }
+  .tBox_inner ul li {
+      font-size: 1.2em;
+  }
+  /* 더보기 버튼설정 */
+  .circle-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+}
+  }
+  @media(min-width:1000px) and (max-width:1279px) {
+    .explain {
+      height: 550px;
+  }
+    .one .txt_box {
+        width: 50%;
+        height: 100%;
+    }
+    .tBox_inner {
+      height: 450px;
+      margin-top: 11%;
+  }
+  .tBox_inner p {
+      font-size: 1em;
+  }
+  .tBox_inner h4 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+  }
+  .tBox_inner ul {
+      height: 150px;
+  }
+  .tBox_inner ul li {
+      font-size: 1.5em;
+  }
+  /* 더보기 버튼설정 */
+  .circle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+}
+  }
 
 
   /* 네번째 섹션############## */
