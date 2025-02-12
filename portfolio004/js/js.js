@@ -68,6 +68,7 @@ $(document).ready(function() {
           top: '85%'
         }, 600);
       });
+
   
       // 햄버거 버튼 클릭 시 팝업나타남
       $('.bars').click(function(){
@@ -77,8 +78,21 @@ $(document).ready(function() {
         $('.close_ham').toggleClass('on')
         $('.search_pop').removeClass('on')
         $('header').removeClass('expanded')
-        $('nav').toggleClass('none')
+        // $('nav').toggleClass('none')
       })
+
+        // 1뎁스 메뉴 클릭 시 2뎁스 메뉴 토글
+        $('.ham_inner > ul > li > a').on('click', function(e) {
+          e.preventDefault();  // 링크 기본 동작 방지
+          
+          // 현재 클릭한 메뉴의 부모(li)에 active 클래스 토글
+          $(this).parent('li').toggleClass('active');
+
+          // 다른 메뉴들은 닫기
+          $(this).parent('li').siblings().removeClass('active');
+        });
+
+
 
       // top버튼 클릭시 화면 상단으로
       $('.top').click(function(){

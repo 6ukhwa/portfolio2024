@@ -1109,13 +1109,12 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
         color: #fff;
     }
     /* 기본 데스크탑 레이아웃: 가로 배치 */
-.one, .three {
+/* .one, .three {
   flex-direction: row;  /* 사진 | 글 */
-}
 
+/* 
 .two, .four {
   flex-direction: row-reverse;  /* 글 | 사진 */
-}
 
     /* 더보기 버튼설정 */
     .circle-btn {
@@ -1974,83 +1973,130 @@ body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkM
 
 
   /* 햄버거 팝업 설정############## */
-  .ham_pop {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    position: fixed;
-    z-index: 10;
-    left: 0;top: 0;
-    display: none;
-  }
-  .ham_pop.on {
-    display: block;
+/* 햄버거 메뉴 전체 팝업 */
+.ham_pop {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(000, 000, 000, 0.4);
+  backdrop-filter: blur(7px);
+  position: fixed;
+  z-index: 10;
+  right: 0; top: 0;
+  display: none;
+}
+
+.ham_pop.on {
+  display: block;  /* 햄버거 버튼 클릭 시 팝업 표시 */
+}
+
+/* 햄버거 메뉴 내부 컨테이너 */
+.ham_pop .ham_inner {
+  height: 100%;
+  width: 25%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #0072BC;
+  position: absolute;
+  right: 0;  
+  transform: translateX(100%);
+  animation: title 0.5s 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes title {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* 1뎁스 메뉴 스타일 */
+.ham_pop .ham_inner > ul {
+  width: 80%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+.ham_pop .ham_inner > ul > li {
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+.ham_pop .ham_inner > ul li {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;  /* 클릭 가능한 영역 표시 */
+}
+
+
+.ham_pop .ham_inner > ul li > a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+}
+
+/* 2뎁스(서브 메뉴) 기본 숨김 */
+.ham_pop .ham_inner > ul li ul.sub {
+  display: none;  /* 기본적으로 숨김 */
+  margin-top: 20px;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+/* 2뎁스 메뉴 아이템 */
+.ham_pop .ham_inner > ul li ul.sub li {
+  margin-bottom: 10px;
+}
+
+.ham_pop .ham_inner > ul li ul.sub li a {
+  color: #bbb;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.ham_pop .ham_inner > ul li ul.sub li:hover a {
+  font-weight: 500;
+  color: #fff;
+}
+
+/* 1뎁스 클릭 시 2뎁스 표시 */
+.ham_pop .ham_inner > ul li.active ul.sub {
+  display: flex;  /* 활성화된 메뉴의 서브 메뉴 표시 */
+}
+@media(max-width:600px) {
+  .ham_pop .ham_inner > ul li > a {
+    font-size: 1rem;
   }
   .ham_pop .ham_inner {
-    height: 90%;
+    width: 100%;
+  }
+}
+@media(min-width:601px) and (max-width:768px) {
+  .ham_pop .ham_inner > ul li > a {
+    font-size: 1rem;
+  }
+  .ham_pop .ham_inner {
     width: 40%;
-    background-color: #0072BC;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
   }
-  .ham_pop .ham_inner >ul {
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 80px;
+}
+@media(min-width:769px) and (max-width:999px) {
+  .ham_pop .ham_inner > ul li > a {
+    font-size: 1rem;
   }
-
-  .ham_pop .ham_inner >ul li {
-    width: 100%;
-    text-align: right;
-    transform: translateX(-30%);
-    opacity: 0;
-    animation: title 0.5s 0.2s ease-out forwards;
-    position: relative;
-    margin-bottom: 70px;
+  .ham_pop .ham_inner {
+    width: 40%;
   }
-  @keyframes title {
-    0% {transform: translateX(-30%); opacity: 0;}
-    100% {transform: translateX(0); opacity: 1;}
+}
+@media(min-width:1000px) and (max-width:1279px) {
+  .ham_pop .ham_inner > ul li > a {
+    font-size: 1.4rem;
   }
-  .ham_pop .ham_inner >ul li a {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  /* 2뎁스 설정 */
-  .ham_pop .ham_inner >ul li ul.sub {
-    display: flex;
-    margin-top: -30px;
-    position: absolute;
-    left: 120%;
-    /* background-color: red; */
-  }
-  .ham_pop .ham_inner >ul li ul.sub li {
-    /* padding: 10px; */
-    /* background-color: blue; */
-    text-align: center;
-    width: 130px;
-  }
-  .ham_pop .ham_inner >ul li ul.sub li a {
-    color: #444;
-    font-size: 1.1rem;
-    font-weight: 300;
-    /* background-color: orange; */
-  }
-  .ham_pop .ham_inner >ul li ul.sub li:hover a {
-    font-weight: 500;
-    color: #0072BC;
-  }
-
-@media(max-width:600px) {}
-@media(min-width:601px) and (max-width:768px) {}
-@media(min-width:769px) and (max-width:999px) {}
-@media(min-width:1000px) and (max-width:1279px) {}
+}
 
 
 
